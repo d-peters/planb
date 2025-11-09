@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanB Caravaning - Service rund ums Reisemobil und Caravan</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <div class="navbar-row">
+                <div class="navbar-left">
+                    <a class="navbar-brand fw-bold" href="#home">
+                        <i class="bi bi-house-heart-fill me-2"></i><span class="brand-text">PlanB Caravaning</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="desktop-menu">
+                    <ul class="desktop-nav">
+                        <li class="desktop-nav-item">
+                            <a href="#home" class="desktop-nav-link">
+                                <span class="desktop-nav-icon"><i class="bi bi-house-door-fill"></i></span>
+                                <span class="desktop-nav-text">Start</span>
+                            </a>
+                        </li>
+                        <li class="desktop-nav-item">
+                            <a href="#ueber-uns" class="desktop-nav-link">
+                                <span class="desktop-nav-icon"><i class="bi bi-info-circle-fill"></i></span>
+                                <span class="desktop-nav-text">Über uns</span>
+                            </a>
+                        </li>
+                        <li class="desktop-nav-item">
+                            <a href="#services" class="desktop-nav-link">
+                                <span class="desktop-nav-icon"><i class="bi bi-tools"></i></span>
+                                <span class="desktop-nav-text">Services</span>
+                            </a>
+                        </li>
+                        <li class="desktop-nav-item">
+                            <a href="#kontakt" class="desktop-nav-link desktop-nav-cta">
+                                <span class="desktop-nav-text">Kontakt</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Mobile Navigation - right aligned -->
+                <div class="mobile-nav-inline">
+                    <a href="#home" class="mobile-nav-item">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="mobile-nav-label">Start</span>
+                    </a>
+                    <a href="#services" class="mobile-nav-item">
+                        <i class="bi bi-tools"></i>
+                        <span class="mobile-nav-label">Services</span>
+                    </a>
+                    <a href="#kontakt" class="mobile-nav-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span class="mobile-nav-label">Kontakt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-10 mx-auto text-center text-white">
+                    <div class="hero-logo-wrapper mb-4">
+                        <img src="images/planb-logo-white.svg" alt="PlanB Caravaning Logo" class="hero-logo" onerror="this.style.display='none'; this.parentElement.style.display='none';">
+                    </div>
+                    <h1 class="display-3 fw-bold mb-3 hero-title">PlanB Caravaning</h1>
+                    <p class="lead mb-4 hero-subtitle">Service rund ums Reisemobil und Caravan</p>
+                    <div class="hero-badges mb-4">
+                        <a href="https://www.concorde-reisemobile.de/" target="_blank" rel="noopener noreferrer" class="badge hero-badge">
+                            <i class="bi bi-award-fill me-2"></i>
+                            Offizieller Concorde Reisemobile Servicepartner
+                        </a>
+                        <a href="https://www.dometic.com/" target="_blank" rel="noopener noreferrer" class="badge hero-badge">
+                            <i class="bi bi-patch-check-fill me-2"></i>
+                            Dometic Service Provider
+                        </a>
+                    </div>
+                    <div class="hero-call-wrapper mb-5">
+                        <div class="hero-call-box">
+                            <div class="hero-call-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="hero-call-content">
+                                <p class="hero-call-text mb-2">Jetzt anrufen für eine kostenlose Beratung</p>
+                                <a href="tel:+491712100536" class="hero-call-number">
+                                    <i class="bi bi-phone me-2"></i>
+                                    +49 171 2100536
+                                </a>
+                                <p class="hero-call-note mt-2">Terminvereinbarung erwünscht</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#services" class="btn btn-primary btn-lg me-3 mb-2 mb-md-0">
+                            <i class="bi bi-tools me-2"></i>Unsere Services
+                        </a>
+                        <a href="#kontakt" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Kontakt aufnehmen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#ueber-uns"><i class="bi bi-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Über uns Section -->
+    <section id="ueber-uns" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto mb-4 mb-lg-0">
+                    <h2 class="section-title mb-4">Willkommen bei PlanB Caravaning</h2>
+                    <p class="lead text-muted mb-4 about-intro">
+                        Wir lieben es, Ihnen zu helfen - Service rund ums Reisemobil und Caravan.
+                    </p>
+                    <p class="about-text">
+                        PlanB Caravaning ist Ihr kompetenter Partner für alle Belange rund um Reisemobile und Caravans. 
+                        Als offizieller Concorde Reisemobile Servicepartner und Dometic Service Provider bieten wir Ihnen 
+                        professionelle Dienstleistungen auf höchstem Niveau.
+                    </p>
+                    <p class="about-text">
+                        Unser erfahrenes Team steht Ihnen mit umfassender Expertise zur Seite. Von Instandsetzungen über 
+                        Einbauten und Umbauten bis hin zur Gastank-Einbau und Prüfung - wir kümmern uns um alle Aspekte 
+                        Ihres Reisemobils oder Caravans.
+                    </p>
+                    <p class="about-text">
+                        Mit jahrelanger Erfahrung in der Branche verstehen wir die Bedürfnisse unserer Kunden und bieten 
+                        maßgeschneiderte Lösungen für jedes Fahrzeug. Unser Ziel ist es, Ihnen maximale Zuverlässigkeit 
+                        und Sicherheit auf all Ihren Reisen zu gewährleisten.
+                    </p>
+                    <p class="about-text">
+                        Wir arbeiten ausschließlich mit hochwertigen Originalteilen und modernster Technologie, um 
+                        sicherzustellen, dass Ihr Reisemobil oder Caravan in bestem Zustand bleibt. Unser Service umfasst 
+                        nicht nur Reparaturen, sondern auch präventive Wartung, um unerwartete Ausfälle zu vermeiden.
+                    </p>
+                    <p class="mt-4 mb-3">
+                        <strong class="about-strong">Unsere Kompetenzen:</strong>
+                    </p>
+                    <ul class="list-unstyled about-list">
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Offizieller Concorde Reisemobile Servicepartner</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Dometic Service Provider</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Instandsetzungen, Einbauten & Umbauten</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Gastanks Einbau und Prüfung</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Service rund ums Reisemobil und Caravan</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Professionelle Beratung und Planung</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Präventive Wartung und Inspektionen</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Notfallservice und schnelle Hilfe</li>
+                    </ul>
+                    <div class="alert alert-info mt-4 about-alert">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        <strong>Wichtig:</strong> Bitte vereinbaren Sie vorab unbedingt einen Termin, damit wir uns 
+                        ausreichend Zeit für Sie und Ihr Fahrzeug nehmen können. So können wir Ihnen den bestmöglichen 
+                        Service bieten und Wartezeiten vermeiden.
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <div class="bg-light rounded p-5 shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partner Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="section-title mb-4">Unsere Partner</h3>
+                    <p class="text-muted mb-4">Wir arbeiten mit renommierten Herstellern und Partnern zusammen:</p>
+                    <div class="row g-4">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner1">
+                                    <img src="images/logos/alde.png" alt="Alde Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Alde</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel1">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/alde.png" alt="Alde Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Alde</h4>
+                                        <p>Alde ist ein führender Hersteller von Heizungs- und Warmwassersystemen für Reisemobile und Caravans. Die schwedische Firma entwickelt innovative Flüssiggas- und Dieselheizungen, die für zuverlässige Wärme und Komfort auf Reisen sorgen. Alde-Systeme zeichnen sich durch ihre Energieeffizienz, leise Betriebsweise und innovative Technologie aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner2">
+                                    <img src="images/logos/al-ko-sawiko.png" alt="AL-KO-Sawiko Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">AL-KO-Sawiko</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel2">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/al-ko-sawiko.png" alt="AL-KO-Sawiko Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">AL-KO-Sawiko</h4>
+                                        <p>AL-KO-Sawiko ist ein bekannter Hersteller von Fahrwerkskomponenten und Zubehör für Caravans und Wohnmobile. Das Unternehmen bietet hochwertige Achsen, Stabilisatoren, Stoßdämpfer und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. AL-KO-Produkte stehen für Qualität und Langlebigkeit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner3">
+                                    <img src="images/logos/buettner-elektronik.png" alt="Büttner Elektronik Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Büttner Elektronik</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel3">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/buettner-elektronik.png" alt="Büttner Elektronik Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Büttner Elektronik</h4>
+                                        <p>Büttner Elektronik entwickelt und produziert innovative elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Die Firma bietet Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner4">
+                                    <img src="images/logos/bulltron.png" alt="BullTron Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">BullTron</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel4">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/bulltron.png" alt="BullTron Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">BullTron</h4>
+                                        <p>BullTron ist ein Spezialist für elektronische Steuerungssysteme und Sicherheitstechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Alarmanlagen, Zentralverriegelungen, Fernbedienungen und intelligente Steuerungssysteme, die Sicherheit und Komfort im Wohnmobil erhöhen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner5">
+                                    <img src="images/logos/clesana.png" alt="Clesana Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Clesana</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel5">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/clesana.png" alt="Clesana Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Clesana</h4>
+                                        <p>Clesana ist ein führender Hersteller von Sanitär- und Abwassersystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Waschbecken, Duschkabinen und Abwassersysteme, die für Hygiene und Komfort auf Reisen sorgen. Clesana-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner6">
+                                    <img src="images/logos/eberspaecher.png" alt="Eberspächer Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Eberspächer</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel6">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/eberspaecher.png" alt="Eberspächer Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Eberspächer</h4>
+                                        <p>Eberspächer ist ein weltweit führender Hersteller von Standheizungen und Abgassystemen für Fahrzeuge. Die Firma entwickelt innovative Diesel- und Benzinstandheizungen, die unabhängig vom Motor für Wärme sorgen. Eberspächer-Systeme sind bekannt für ihre Zuverlässigkeit, Effizienz und innovative Technologie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner7">
+                                    <img src="images/logos/frankana-freiko.png" alt="Frankana/Freiko Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Frankana/Freiko</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel7">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/frankana-freiko.png" alt="Frankana/Freiko Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Frankana/Freiko</h4>
+                                        <p>Frankana/Freiko ist ein Spezialist für Fahrwerkskomponenten und Sicherheitstechnik für Caravans. Das Unternehmen bietet hochwertige Stabilisatoren, Kupplungen, Achsen und weitere Fahrwerkskomponenten, die für sicheres und komfortables Fahren sorgen. Die Produkte stehen für Qualität und Innovation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner8">
+                                    <img src="images/logos/ep-hpc-linnepe.png" alt="EP - HPC - Linnepe Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">EP - HPC - Linnepe</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel8">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/ep-hpc-linnepe.png" alt="EP - HPC - Linnepe Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">EP - HPC - Linnepe</h4>
+                                        <p>EP - HPC - Linnepe ist ein Hersteller von hochwertigen Fahrwerkskomponenten und Zubehör für Caravans. Das Unternehmen bietet innovative Lösungen für Achsen, Stabilisatoren und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. Die Produkte zeichnen sich durch ihre Qualität und Langlebigkeit aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner9">
+                                    <img src="images/logos/ten-haaft-oyster.png" alt="Ten Haaft Oyster Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Ten Haaft Oyster</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel9">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/ten-haaft-oyster.png" alt="Ten Haaft Oyster Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Ten Haaft Oyster</h4>
+                                        <p>Ten Haaft Oyster ist ein führender Hersteller von Markisen und Sonnenschutzsystemen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Seitenmarkisen, Vordächer und Sonnenschutz, die für Komfort und Schutz vor Sonne und Wetter sorgen. Die Produkte zeichnen sich durch ihre Qualität und einfache Bedienung aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner10">
+                                    <img src="images/logos/intelliroute.png" alt="IntelliRoute Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">IntelliRoute</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel10">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/intelliroute.png" alt="IntelliRoute Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">IntelliRoute</h4>
+                                        <p>IntelliRoute entwickelt intelligente Navigations- und Routenplanungssysteme speziell für Reisemobile. Das Unternehmen bietet Lösungen, die die spezifischen Anforderungen von Wohnmobilen berücksichtigen, wie Höhenbeschränkungen, Gewichtsbeschränkungen und Stellplatzsuche. Die Systeme helfen dabei, die optimale Route für Reisemobile zu finden.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner11">
+                                    <img src="images/logos/sog-systeme.png" alt="SOG Systeme Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">SOG Systeme</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel11">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/sog-systeme.png" alt="SOG Systeme Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">SOG Systeme</h4>
+                                        <p>SOG Systeme ist ein Spezialist für Abwassersysteme und Sanitärtechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Toiletten, Abwassersysteme und Sanitärkomponenten, die für Hygiene und Komfort sorgen. SOG-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner12">
+                                    <img src="images/logos/teleco.png" alt="TELECO Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">TELECO</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel12">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/teleco.png" alt="TELECO Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">TELECO</h4>
+                                        <p>TELECO ist ein führender Hersteller von Satelliten- und TV-Systemen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Satellitenantennen, TV-Systeme und Multimedia-Komponenten, die für Unterhaltung und Information auf Reisen sorgen. TELECO-Produkte zeichnen sich durch ihre Qualität und einfache Installation aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner13">
+                                    <img src="images/logos/thetford.png" alt="Thetford Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">Thetford</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel13">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/thetford.png" alt="Thetford Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Thetford</h4>
+                                        <p>Thetford ist ein weltweit führender Hersteller von Sanitär- und Kühlsystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Kühlschränke, Herde und weitere Küchenkomponenten, die für Komfort und Hygiene auf Reisen sorgen. Thetford-Produkte sind bekannt für ihre Qualität, Zuverlässigkeit und innovative Technologie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="partner-card">
+                                <div class="partner-card-header" data-partner="partner14">
+                                    <img src="images/logos/thitronik.png" alt="THITRONIK Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                    <span class="partner-name">THITRONIK</span>
+                                    <button class="partner-toggle-btn" type="button">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel14">
+                                    <div class="partner-details-panel">
+                                        <h4><img src="images/logos/thitronik.png" alt="THITRONIK Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">THITRONIK</h4>
+                                        <p>THITRONIK ist ein Spezialist für elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Das Unternehmen bietet innovative Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren. THITRONIK-Produkte zeichnen sich durch ihre Zuverlässigkeit und innovative Technologie aus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-3">Unsere Services</h2>
+                    <p class="text-muted fs-5">Rundum-Service für Ihr Reisemobil oder Caravan</p>
+                    <p class="alert alert-info mt-3">
+                        <i class="bi bi-info-circle me-2"></i>
+                        <strong>Wichtig:</strong> Bitte vereinbaren Sie vorab unbedingt einen Termin.
+                    </p>
+                </div>
+            </div>
+            <!-- Row 1 -->
+            <div class="row g-5 service-row" data-row="1">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service1" data-row="1">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h5 class="mb-3">Instandsetzungen</h5>
+                            <p class="text-muted mb-0">Professionelle Reparaturen und Instandsetzungen für Ihr Reisemobil oder Caravan</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service1 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile1">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service2" data-row="1">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-wrench-adjustable"></i>
+                            </div>
+                            <h5 class="mb-3">Einbauten</h5>
+                            <p class="text-muted mb-0">Fachgerechte Einbauten von Zubehör und Ausstattung in Ihr Fahrzeug</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service2 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile2">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service3" data-row="1">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <h5 class="mb-3">Umbauten</h5>
+                            <p class="text-muted mb-0">Individuelle Umbauten nach Ihren Wünschen und Anforderungen</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service3 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile3">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile3"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Panel for Row 1 -->
+                <div class="col-12 service-panel-desktop">
+                    <div class="collapse service-details-panel-wrapper" id="serviceDetailsPanelRow1">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-row1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-5"></div>
+            
+            <!-- Row 2 -->
+            <div class="row g-5 service-row" data-row="2">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service4" data-row="2">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-fuel-pump"></i>
+                            </div>
+                            <h5 class="mb-3">Gastanks Einbau & Prüfung</h5>
+                            <p class="text-muted mb-0">Sicherer Einbau und Prüfung von Gastanks nach geltenden Vorschriften</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service4 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile4">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service5" data-row="2">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5 class="mb-3">Concorde Service</h5>
+                            <p class="text-muted mb-0">Als offizieller Concorde Reisemobile Servicepartner bieten wir Ihnen professionelle Wartung und Service</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service5 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile5">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service6" data-row="2">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-snow"></i>
+                            </div>
+                            <h5 class="mb-3">Dometic Service</h5>
+                            <p class="text-muted mb-0">Als Dometic Service Provider kümmern wir uns um alle Dometic Geräte in Ihrem Fahrzeug</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service6 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile6">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile6"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Panel for Row 2 -->
+                <div class="col-12 service-panel-desktop">
+                    <div class="collapse service-details-panel-wrapper" id="serviceDetailsPanelRow2">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-row2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-5"></div>
+            
+            <!-- Row 3 -->
+            <div class="row g-5 service-row" data-row="3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service7" data-row="3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-clipboard-check"></i>
+                            </div>
+                            <h5 class="mb-3">Technische Prüfung</h5>
+                            <p class="text-muted mb-0">Umfassende technische Inspektion und Zustandsberichte für Ihr Fahrzeug</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service7 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile7">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile7"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service8" data-row="3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h5 class="mb-3">Service & Wartung</h5>
+                            <p class="text-muted mb-0">Regelmäßige Wartung und Service für alle Marken und Modelle</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service8 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile8">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile8"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="service-card-header" data-service="service9" data-row="3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <h5 class="mb-3">Zubehör & Ersatzteile</h5>
+                            <p class="text-muted mb-0">Umfangreiches Zubehör und Ersatzteile von unseren Partnern</p>
+                            <button class="service-toggle-btn mt-3" type="button">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Panel for service9 -->
+                    <div class="collapse service-details-panel-wrapper service-panel-mobile" id="serviceDetailsPanelMobile9">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-mobile9"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Panel for Row 3 -->
+                <div class="col-12 service-panel-desktop">
+                    <div class="collapse service-details-panel-wrapper" id="serviceDetailsPanelRow3">
+                        <div class="service-details-panel">
+                            <div class="service-details-content-row3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-3">Kontaktieren Sie uns</h2>
+                    <p class="text-muted">Wir sind für Sie da - sprechen Sie uns an!</p>
+                    <p class="alert alert-warning mt-3">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        <strong>Wichtig:</strong> Bitte vereinbaren Sie vorab unbedingt einen Termin.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">E-Mail-Adresse</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="nachricht" class="form-label">Nachricht</label>
+                                        <textarea class="form-control" id="nachricht" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="datenschutz" required>
+                                            <label class="form-check-label" for="datenschutz">
+                                                Hiermit stimme ich zu, dass die Daten gespeichert und zum Zweck der Kontaktaufnahme verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">Senden</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill text-primary display-6 mb-3"></i>
+                        <h5>Adresse</h5>
+                        <p class="text-muted mb-0">
+                            An den Gärten Nr. 48<br>
+                            29439 Lüchow (Wendland)<br>
+                            Niedersachsen, Deutschland
+                        </p>
+                        <p class="text-muted mt-2 mb-0 small">
+                            Jeetzeler Str. 10a<br>
+                            D-29439 Lüchow (Wendland)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill text-primary display-6 mb-3"></i>
+                        <h5>Telefon</h5>
+                        <p class="text-muted mb-0">
+                            <a href="tel:+491712100536" class="text-decoration-none">+49 171 2100536</a>
+                        </p>
+                        <p class="text-muted mt-2 mb-0 small">
+                            Fax: +49 5841 1309311
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill text-primary display-6 mb-3"></i>
+                        <h5>E-Mail</h5>
+                        <p class="text-muted mb-0">
+                            <a href="mailto:info@planb-caravan.de" class="text-decoration-none">info@planb-caravan.de</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Impressum Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Impressum</h5>
+                            <p class="mb-2"><strong>Verantwortlich:</strong></p>
+                            <p class="mb-2">Peter Triebe</p>
+                            <p class="mb-2">Jeetzeler Str. 10a u. An den Gärten 48</p>
+                            <p class="mb-2">D-29439 Lüchow (Wendland)</p>
+                            <p class="mb-2"><strong>Kontakt:</strong></p>
+                            <p class="mb-2">E-Mail: <a href="mailto:info@planb-caravan.de">info@planb-caravan.de</a></p>
+                            <p class="mb-2">Tel: 0049-(0)171-2100536</p>
+                            <p class="mb-2">Fax: 0049-(0)5841-1309311</p>
+                            <p class="mb-2"><strong>Registereintrag:</strong></p>
+                            <p class="mb-2">Der Markenname PlanB Caravaning ist eine eingetragene und rechtlich geschützte Marke.</p>
+                            <p class="mb-2">PlanB Caravaning (Geschäftsbezeichnung)</p>
+                            <p class="mb-2">Inhaber: Peter Triebe</p>
+                            <p class="mb-0">Umsatzsteuer-ID: DE116029248</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="mb-2"><i class="bi bi-house-heart-fill me-2"></i>PlanB Caravaning</h5>
+                    <p class="text-muted mb-0 small">&copy; 2024 PlanB Caravaning. Alle Rechte vorbehalten.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

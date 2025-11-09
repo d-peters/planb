@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-project",
+  "version": "1.0.0",
+  "description": "A modern Bootstrap 5 project template",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "serve": "npx http-server -p 8080"
+  },
+  "keywords": [
+    "bootstrap",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+
