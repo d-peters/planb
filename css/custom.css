@@ -437,10 +437,10 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 120vh;
+    min-height: 800px;
     background: var(--primary-gradient);
-    background-image: url('../images/hero-background.jpg');
+    background-image: url('../images/alle/f7559acc-70cd-4456-adf5-06101a30751e.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -449,7 +449,7 @@ body {
     align-items: center;
     overflow: hidden;
     margin-top: 0;
-    padding-top: 76px;
+    padding-top: 0;
 }
 
 .hero-section::before {
@@ -534,6 +534,7 @@ body {
 .hero-section .container {
     position: relative;
     z-index: 2;
+    padding-top: 100px;
 }
 
 .hero-logo-wrapper {
@@ -588,6 +589,8 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     cursor: pointer;
+    overflow: hidden;
+    max-height: 3rem;
 }
 
 .hero-badge:hover {
@@ -609,6 +612,39 @@ body {
 .hero-badge:hover i {
     color: var(--white);
     transform: scale(1.1);
+}
+
+.concorde-logo-icon {
+    height: 1.2rem;
+    max-height: 1.2rem;
+    width: auto;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+    transition: all var(--transition-base);
+    object-fit: contain;
+}
+
+/* JPG-Logo ohne Filter für bessere Sichtbarkeit */
+.concorde-logo-jpg {
+    filter: none !important;
+    opacity: 1;
+}
+
+/* Concorde Logo etwas größer */
+.concorde-logo-size {
+    height: 1.4rem !important;
+    max-height: 1.4rem !important;
+}
+
+.hero-badge:hover .concorde-logo-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.concorde-fallback-icon {
+    display: inline-block;
 }
 
 .hero-call-wrapper {
@@ -1468,6 +1504,10 @@ footer a:hover {
         margin-top: 0;
     }
     
+    .hero-section .container {
+        padding-top: 90px;
+    }
+    
     .hero-logo {
         max-width: 150px;
     }
@@ -1482,16 +1522,37 @@ footer a:hover {
     
     .hero-badges {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 0.75rem;
+        width: 100%;
+        padding: 0 1.5rem;
     }
     
     .hero-badge {
-        font-size: 0.85rem;
-        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
         justify-content: center;
+        max-height: 3rem;
+        min-height: 3rem;
+    }
+    
+    /* Logos auf Mobile */
+    .concorde-logo-icon {
+        height: 1.2rem !important;
+        max-height: 1.2rem !important;
+        margin-right: 0.6rem;
+    }
+    
+    .concorde-logo-size {
+        height: 1.4rem !important;
+        max-height: 1.4rem !important;
+    }
+    
+    .hero-badge img {
+        max-width: 100%;
+        height: auto;
     }
     
     .hero-call-wrapper {
@@ -1644,7 +1705,12 @@ footer a:hover {
 
 @media (max-width: 576px) {
     .hero-section {
-        padding: 60px 0;
+        padding: 0;
+        padding-bottom: 60px;
+    }
+    
+    .hero-section .container {
+        padding-top: 80px;
     }
     
     .hero-logo {
@@ -2046,6 +2112,13 @@ html {
 }
 
 @media (max-width: 768px) {
+    /* Partner-Karten: 1 Karte pro Zeile auf Mobile */
+    .row.g-4 > .col-6.col-md-4.col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    
     .partner-card-header {
         min-height: 120px;
         padding: 1rem;
@@ -2076,5 +2149,37 @@ html {
         font-size: 0.95rem;
         line-height: 1.7;
         text-align: left;
+    }
+}
+
+/* Gallery Section */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all var(--transition-base);
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+    .gallery-image {
+        height: 250px;
     }
 }
