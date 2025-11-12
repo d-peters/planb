@@ -1499,13 +1499,15 @@ footer a:hover {
         min-height: 500px;
         height: auto;
         padding-top: 0;
-        padding-bottom: 80px;
+        padding-bottom: 100px;
         background-attachment: scroll;
         margin-top: 0;
+        overflow: visible;
     }
     
     .hero-section .container {
         padding-top: 90px;
+        padding-bottom: 20px;
     }
     
     .hero-logo {
@@ -1596,11 +1598,23 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+        width: 100%;
     }
     
     .hero-cta .btn {
         width: 100%;
         max-width: 300px;
+        min-width: 250px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+    
+    .hero-cta .btn.me-3 {
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem;
     }
     
     .display-3 {
@@ -1706,11 +1720,13 @@ footer a:hover {
 @media (max-width: 576px) {
     .hero-section {
         padding: 0;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
+        overflow: visible;
     }
     
     .hero-section .container {
         padding-top: 80px;
+        padding-bottom: 20px;
     }
     
     .hero-logo {
@@ -1758,6 +1774,25 @@ footer a:hover {
     
     .hero-call-note {
         font-size: 0.8rem;
+    }
+    
+    .hero-cta {
+        margin-top: 1.25rem;
+        padding: 0 0.75rem;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+        min-width: 200px;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .hero-cta .btn.me-3 {
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem;
     }
     
     .btn-lg {
