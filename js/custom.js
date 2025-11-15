@@ -199,12 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
         service7: {
             title: 'Technische Prüfung',
             icon: 'bi-clipboard-check',
-            content: 'Vor dem Kauf eines gebrauchten Reisemobils oder Caravans empfehlen wir eine umfassende technische Prüfung. Wir untersuchen alle wichtigen Komponenten wie Aufbau, Elektrik, Wasser- und Gasanlage, Fahrwerk und Motor. Sie erhalten von uns einen detaillierten Zustandsbericht mit allen festgestellten Mängeln und einer realistischen Einschätzung des Fahrzeugzustands. Diese Prüfung gibt Ihnen Sicherheit bei Ihrer Kaufentscheidung und kann bei Preisverhandlungen hilfreich sein.'
+            content: 'Vor dem Kauf eines gebrauchten Reisemobils empfehlen wir eine umfassende technische Prüfung. Wir untersuchen alle wichtigen Komponenten wie Aufbau, Elektrik, Wasser- und Gasanlage, Fahrwerk und Motor. Sie erhalten von uns einen detaillierten Zustandsbericht mit allen festgestellten Mängeln und einer realistischen Einschätzung des Fahrzeugzustands. Diese Prüfung gibt Ihnen Sicherheit bei Ihrer Kaufentscheidung und kann bei Preisverhandlungen hilfreich sein.'
         },
         service8: {
-            title: 'Service & Wartung',
-            icon: 'bi-tools',
-            content: 'Regelmäßige Wartung und Service verlängern die Lebensdauer Ihres Reisemobils oder Caravans erheblich. Wir führen Saisonvorbereitungen, Winterchecks und Inspektionen für alle Marken und Modelle durch. Dazu gehören unter anderem die Überprüfung von Gas- und Wasseranlagen, die Wartung der Elektrik, die Kontrolle von Reifen und Bremsen sowie die Pflege des Aufbaus. Mit einem regelmäßigen Service bleiben Sie mobil und vermeiden teure Reparaturen durch frühzeitige Erkennung von Problemen.'
+            title: 'Schnäppchenecke',
+            icon: 'bi-tag-fill',
+            content: 'In unserer Schnäppchenecke finden Sie regelmäßig exklusive Angebote und Sonderpreise für Reisemobile, und hochwertiges Zubehör. Wir bieten Ihnen Vorführfahrzeuge, Ausstellungsstücke und Sonderaktionen zu besonders attraktiven Konditionen. Lassen Sie sich von unseren aktuellen Schnäppchen überraschen und sparen Sie bares Geld bei Ihrem Traumfahrzeug oder beim passenden Zubehör. Schauen Sie regelmäßig vorbei, denn unsere Angebote wechseln und sind oft nur für kurze Zeit verfügbar.'
         },
         service9: {
             title: 'Zubehör & Ersatzteile',

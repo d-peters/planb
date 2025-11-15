@@ -96,6 +96,10 @@ body {
     border-bottom: 2px solid var(--accent-color);
     padding: 1rem 0;
     z-index: 1000;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .navbar-row {
@@ -103,6 +107,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .navbar-left {
@@ -111,10 +119,17 @@ body {
     gap: 1rem;
     flex: 1;
     min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .navbar .container {
     max-width: 100%;
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navbar.scrolled {
@@ -149,20 +164,23 @@ body {
 .navbar-logo {
     height: 80px;
     width: auto;
-    min-width: 300px;
+    min-width: 0;
+    max-width: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     transition: all var(--transition-base);
-    background: rgba(255, 255, 255, 0.6);
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-md);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    opacity: 0.95;
+    flex-shrink: 1;
 }
 
 .navbar-brand:hover .navbar-logo {
     transform: scale(1.05);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 /* Desktop Menu */
@@ -564,19 +582,20 @@ body {
 
 .hero-logo-wrapper {
     animation: fadeInDown 1s ease-out;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 2rem;
-    border-radius: var(--radius-xl);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
     display: inline-block;
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
 }
 
 .hero-logo {
     max-width: 500px;
     height: auto;
-    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+    filter: brightness(0) invert(1) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
     transition: transform var(--transition-base);
+    opacity: 0.95;
 }
 
 .hero-logo:hover {
@@ -657,10 +676,10 @@ body {
     object-fit: contain;
 }
 
-/* JPG-Logo ohne Filter für bessere Sichtbarkeit */
+/* JPG-Logo auch weiß machen */
 .concorde-logo-jpg {
-    filter: none !important;
-    opacity: 1;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.95 !important;
 }
 
 /* Concorde Logo etwas größer */
@@ -1501,8 +1520,10 @@ footer a:hover {
     
     .navbar-logo {
         height: 70px;
-        min-width: 250px;
-        padding: 0.6rem 1.2rem;
+        min-width: 0;
+        max-width: 100%;
+        padding: 0;
+        flex-shrink: 1;
     }
     
     .navbar-brand i {
@@ -1537,7 +1558,9 @@ footer a:hover {
     
     .mobile-nav-inline {
         gap: 0.4rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+        max-width: fit-content;
     }
     
     /* Add padding to body for navbar */
@@ -1905,8 +1928,10 @@ footer a:hover {
     
     .navbar-logo {
         height: 40px;
-        min-width: 120px;
-        padding: 0.35rem 0.6rem;
+        min-width: 0;
+        max-width: 100%;
+        padding: 0;
+        flex-shrink: 1;
     }
     
     .navbar-brand i {
