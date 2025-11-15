@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
+    <!-- reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -52,7 +55,8 @@
                                 </a>
                             </li>
                             <li class="desktop-nav-item">
-                                <a href="#kontakt" class="desktop-nav-link desktop-nav-cta">
+                                <a href="#kontakt" class="desktop-nav-link">
+                                    <span class="desktop-nav-icon"><i class="bi bi-envelope-fill"></i></span>
                                     <span class="desktop-nav-text">Kontakt</span>
                                 </a>
                             </li>
@@ -703,242 +707,287 @@
                 <div class="col-12">
                     <h3 class="section-title mb-4">Unsere Partner</h3>
                     <p class="text-muted mb-4">Einige unserer Partnern:</p>
-                    <div class="row g-4">
+                    <!-- Partner Row 1 -->
+                    <div class="row g-4 partner-row" data-row="1">
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner1">
+                                <div class="partner-card-header" data-partner="partner1" data-row="1">
                                     <img src="images/logos/alde.png" alt="Alde Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Alde</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel1">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/alde.png" alt="Alde Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Alde</h4>
-                                        <p>Alde ist ein führender Hersteller von Heizungs- und Warmwassersystemen für Reisemobile und Caravans. Die schwedische Firma entwickelt innovative Flüssiggas- und Dieselheizungen, die für zuverlässige Wärme und Komfort auf Reisen sorgen. Alde-Systeme zeichnen sich durch ihre Energieeffizienz, leise Betriebsweise und innovative Technologie aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner1 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile1">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile1"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner2">
+                                <div class="partner-card-header" data-partner="partner2" data-row="1">
                                     <img src="images/logos/al-ko-sawiko.png" alt="AL-KO-Sawiko Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">AL-KO-Sawiko</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel2">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/al-ko-sawiko.png" alt="AL-KO-Sawiko Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">AL-KO-Sawiko</h4>
-                                        <p>AL-KO-Sawiko ist ein bekannter Hersteller von Fahrwerkskomponenten und Zubehör für Caravans und Wohnmobile. Das Unternehmen bietet hochwertige Achsen, Stabilisatoren, Stoßdämpfer und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. AL-KO-Produkte stehen für Qualität und Langlebigkeit.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner2 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile2">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile2"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner3">
+                                <div class="partner-card-header" data-partner="partner3" data-row="1">
                                     <img src="images/logos/buettner-elektronik.png" alt="Büttner Elektronik Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Büttner Elektronik</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel3">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/buettner-elektronik.png" alt="Büttner Elektronik Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Büttner Elektronik</h4>
-                                        <p>Büttner Elektronik entwickelt und produziert innovative elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Die Firma bietet Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner3 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile3">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile3"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner4">
+                                <div class="partner-card-header" data-partner="partner4" data-row="1">
                                     <img src="images/logos/bulltron.png" alt="BullTron Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">BullTron</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel4">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/bulltron.png" alt="BullTron Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">BullTron</h4>
-                                        <p>BullTron ist ein Spezialist für elektronische Steuerungssysteme und Sicherheitstechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Alarmanlagen, Zentralverriegelungen, Fernbedienungen und intelligente Steuerungssysteme, die Sicherheit und Komfort im Wohnmobil erhöhen.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner4 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile4">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile4"></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Desktop Panel for Row 1 -->
+                        <div class="col-12 partner-panel-desktop">
+                            <div class="collapse partner-details-panel-wrapper" id="partnerDetailsPanelRow1">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-row1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partner Row 2 -->
+                    <div class="row g-4 partner-row" data-row="2">
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner5">
-                                    <img src="images/logos/clesana.png" alt="Clesana Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                <div class="partner-card-header" data-partner="partner5" data-row="2">
+                                    <img src="images/logos/clesana.avif" alt="Clesana Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Clesana</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel5">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/clesana.png" alt="Clesana Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Clesana</h4>
-                                        <p>Clesana ist ein führender Hersteller von Sanitär- und Abwassersystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Waschbecken, Duschkabinen und Abwassersysteme, die für Hygiene und Komfort auf Reisen sorgen. Clesana-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner5 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile5">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile5"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner6">
-                                    <img src="images/logos/eberspaecher.png" alt="Eberspächer Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                <div class="partner-card-header" data-partner="partner6" data-row="2">
+                                    <img src="images/logos/eberspaecher.svg" alt="Eberspächer Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Eberspächer</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel6">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/eberspaecher.png" alt="Eberspächer Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Eberspächer</h4>
-                                        <p>Eberspächer ist ein weltweit führender Hersteller von Standheizungen und Abgassystemen für Fahrzeuge. Die Firma entwickelt innovative Diesel- und Benzinstandheizungen, die unabhängig vom Motor für Wärme sorgen. Eberspächer-Systeme sind bekannt für ihre Zuverlässigkeit, Effizienz und innovative Technologie.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner6 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile6">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile6"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner7">
+                                <div class="partner-card-header" data-partner="partner7" data-row="2">
                                     <img src="images/logos/frankana-freiko.png" alt="Frankana/Freiko Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Frankana/Freiko</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel7">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/frankana-freiko.png" alt="Frankana/Freiko Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Frankana/Freiko</h4>
-                                        <p>Frankana/Freiko ist ein Spezialist für Fahrwerkskomponenten und Sicherheitstechnik für Caravans. Das Unternehmen bietet hochwertige Stabilisatoren, Kupplungen, Achsen und weitere Fahrwerkskomponenten, die für sicheres und komfortables Fahren sorgen. Die Produkte stehen für Qualität und Innovation.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner7 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile7">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile7"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner8">
+                                <div class="partner-card-header" data-partner="partner8" data-row="2">
                                     <img src="images/logos/ep-hpc-linnepe.png" alt="EP - HPC - Linnepe Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">EP - HPC - Linnepe</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel8">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/ep-hpc-linnepe.png" alt="EP - HPC - Linnepe Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">EP - HPC - Linnepe</h4>
-                                        <p>EP - HPC - Linnepe ist ein Hersteller von hochwertigen Fahrwerkskomponenten und Zubehör für Caravans. Das Unternehmen bietet innovative Lösungen für Achsen, Stabilisatoren und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. Die Produkte zeichnen sich durch ihre Qualität und Langlebigkeit aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner8 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile8">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile8"></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Desktop Panel for Row 2 -->
+                        <div class="col-12 partner-panel-desktop">
+                            <div class="collapse partner-details-panel-wrapper" id="partnerDetailsPanelRow2">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-row2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partner Row 3 -->
+                    <div class="row g-4 partner-row" data-row="3">
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner9">
-                                    <img src="images/logos/ten-haaft-oyster.png" alt="Ten Haaft Oyster Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                <div class="partner-card-header" data-partner="partner9" data-row="3">
+                                    <img src="images/logos/ten-haaft-oyster.webp" alt="Ten Haaft Oyster Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Ten Haaft Oyster</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel9">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/ten-haaft-oyster.png" alt="Ten Haaft Oyster Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Ten Haaft Oyster</h4>
-                                        <p>Ten Haaft Oyster ist ein führender Hersteller von Markisen und Sonnenschutzsystemen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Seitenmarkisen, Vordächer und Sonnenschutz, die für Komfort und Schutz vor Sonne und Wetter sorgen. Die Produkte zeichnen sich durch ihre Qualität und einfache Bedienung aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner9 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile9">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile9"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner10">
+                                <div class="partner-card-header" data-partner="partner10" data-row="3">
                                     <img src="images/logos/intelliroute.png" alt="IntelliRoute Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">IntelliRoute</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel10">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/intelliroute.png" alt="IntelliRoute Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">IntelliRoute</h4>
-                                        <p>IntelliRoute entwickelt intelligente Navigations- und Routenplanungssysteme speziell für Reisemobile. Das Unternehmen bietet Lösungen, die die spezifischen Anforderungen von Wohnmobilen berücksichtigen, wie Höhenbeschränkungen, Gewichtsbeschränkungen und Stellplatzsuche. Die Systeme helfen dabei, die optimale Route für Reisemobile zu finden.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner10 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile10">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile10"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner11">
+                                <div class="partner-card-header" data-partner="partner11" data-row="3">
                                     <img src="images/logos/sog-systeme.png" alt="SOG Systeme Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">SOG Systeme</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel11">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/sog-systeme.png" alt="SOG Systeme Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">SOG Systeme</h4>
-                                        <p>SOG Systeme ist ein Spezialist für Abwassersysteme und Sanitärtechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Toiletten, Abwassersysteme und Sanitärkomponenten, die für Hygiene und Komfort sorgen. SOG-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner11 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile11">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile11"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner12">
+                                <div class="partner-card-header" data-partner="partner12" data-row="3">
                                     <img src="images/logos/teleco.png" alt="TELECO Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">TELECO</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel12">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/teleco.png" alt="TELECO Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">TELECO</h4>
-                                        <p>TELECO ist ein führender Hersteller von Satelliten- und TV-Systemen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Satellitenantennen, TV-Systeme und Multimedia-Komponenten, die für Unterhaltung und Information auf Reisen sorgen. TELECO-Produkte zeichnen sich durch ihre Qualität und einfache Installation aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner12 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile12">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile12"></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Desktop Panel for Row 3 -->
+                        <div class="col-12 partner-panel-desktop">
+                            <div class="collapse partner-details-panel-wrapper" id="partnerDetailsPanelRow3">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-row3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partner Row 4 -->
+                    <div class="row g-4 partner-row" data-row="4">
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner13">
+                                <div class="partner-card-header" data-partner="partner13" data-row="4">
                                     <img src="images/logos/thetford.png" alt="Thetford Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">Thetford</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel13">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/thetford.png" alt="Thetford Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">Thetford</h4>
-                                        <p>Thetford ist ein weltweit führender Hersteller von Sanitär- und Kühlsystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Kühlschränke, Herde und weitere Küchenkomponenten, die für Komfort und Hygiene auf Reisen sorgen. Thetford-Produkte sind bekannt für ihre Qualität, Zuverlässigkeit und innovative Technologie.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner13 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile13">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile13"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="partner-card">
-                                <div class="partner-card-header" data-partner="partner14">
-                                    <img src="images/logos/thitronik.png" alt="THITRONIK Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
+                                <div class="partner-card-header" data-partner="partner14" data-row="4">
+                                    <img src="images/logos/thitronik.svg" alt="THITRONIK Logo" class="partner-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">
                                     <span class="partner-name">THITRONIK</span>
                                     <button class="partner-toggle-btn" type="button">
                                         <i class="bi bi-chevron-down"></i>
                                     </button>
                                 </div>
-                                <div class="partner-details-panel-wrapper collapse" id="partnerDetailsPanel14">
-                                    <div class="partner-details-panel">
-                                        <h4><img src="images/logos/thitronik.png" alt="THITRONIK Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">THITRONIK</h4>
-                                        <p>THITRONIK ist ein Spezialist für elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Das Unternehmen bietet innovative Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren. THITRONIK-Produkte zeichnen sich durch ihre Zuverlässigkeit und innovative Technologie aus.</p>
-                                    </div>
+                            </div>
+                            <!-- Mobile Panel for partner14 -->
+                            <div class="collapse partner-details-panel-wrapper partner-panel-mobile" id="partnerDetailsPanelMobile14">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-mobile14"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Desktop Panel for Row 4 -->
+                        <div class="col-12 partner-panel-desktop">
+                            <div class="collapse partner-details-panel-wrapper" id="partnerDetailsPanelRow4">
+                                <div class="partner-details-panel">
+                                    <div class="partner-details-content-row4"></div>
                                 </div>
                             </div>
                         </div>
@@ -958,9 +1007,12 @@
                 </div>
             </div>
             <div class="row g-4">
+           
+         
+        
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item">
-                        <img src="images/alle/00ee1026-0347-415d-99a9-ed67810975cf.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
+                        <img src="images/alle/168be153-c7eb-431e-8bc7-e34f90887eaa.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -970,38 +1022,173 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item">
-                        <img src="images/alle/13b7023e-fdbe-4adf-81e4-15c354b44fe2.jpg" alt="Caravan Reparatur" class="img-fluid rounded shadow-sm gallery-image">
+                        <img src="images/alle/6d0dabbc-0a5f-4d20-af6f-782a8698170b.jpg" alt="Wohnmobil Reparatur" class="img-fluid rounded shadow-sm gallery-image">
                     </div>
                 </div>
+        
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item">
-                        <img src="images/alle/168be153-c7eb-431e-8bc7-e34f90887eaa.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                        <img src="images/alle/79ac48fb-928b-4d81-8d91-a31629848c20.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="images/alle/1b6b8fe6-fab6-4484-a2fa-6aace2ca5ef1.jpg" alt="PlanB Caravaning Service" class="img-fluid rounded shadow-sm gallery-image">
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="images/alle/1fea41f2-669c-4612-8f0f-e5f1f921d5cd.jpg" alt="Reisemobil Einbau" class="img-fluid rounded shadow-sm gallery-image">
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="images/alle/29f1d75d-5ff3-4f3d-b34a-9c0c27159faf.jpg" alt="Caravan Umbau" class="img-fluid rounded shadow-sm gallery-image">
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="images/alle/346438ce-46fe-4e75-acfb-0fdbab72e10f.jpg" alt="Wohnmobil Service" class="img-fluid rounded shadow-sm gallery-image">
-                    </div>
-                </div>
+             
                 <div class="col-md-6 col-lg-4">
                     <div class="gallery-item">
                         <img src="images/alle/3a5853b0-909f-46b6-a833-6660a0c42dc1.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
                     </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="images/alle/441bf315-cb23-4127-a9d0-2b552a034a6a.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="images/alle/0a3c28cd-6ba3-4670-a6b6-79e74c3bf029.jpg" alt="PlanB Caravaning Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="images/alle/258b2712-22fc-4d3b-b172-a8d1d48e2af3.jpg" alt="Reisemobil Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="images/alle/3fb20ed4-d15b-4e27-b97a-1d6f4a6562ab.jpg" alt="Caravan Reparatur" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/41a6516e-a5db-4476-b678-43e818ab4d45.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+          
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/485237ad-9309-4228-8f87-8f698fc82c7f.jpg" alt="Caravan Umbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+       
+            
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/633dfedd-a9a9-4b1c-9735-7c931ed6b069.jpg" alt="Reisemobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/64e5468e-eee4-4222-bbe8-66c7fc442cb9.jpg" alt="Caravan Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+             
+           
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/79d39eca-6af6-4c38-8de6-86211a46dff9.jpg" alt="Reisemobil Einbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/95df421c-6cf6-4cb6-aa92-d1f343c4247f.jpg" alt="Caravan Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/9854f9c2-f2c5-47c5-8940-1ac480e6f32b.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/9db769e0-831f-4cae-842d-73540cb9f790.jpg" alt="PlanB Caravaning Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/9fe72389-e753-45ec-94a2-8ccedd81dd73.jpg" alt="Reisemobil Reparatur" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/a1d0bc3b-e6bc-4bb0-a696-0ed94b9a41b4.jpg" alt="Caravan Umbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/a81b7aa8-5f37-4411-9906-2d86f88f4f1c.jpg" alt="Wohnmobil Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/ac02c095-995d-45ce-a7e5-64c56699b54f.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/ac91ea81-7033-49d6-b98d-245e5784f439.jpg" alt="Reisemobil Einbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/b3f1bad7-51d2-4a23-8942-8660c2c7f5be.jpg" alt="Caravan Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/b76d7265-724b-4ebf-919f-83727b297d1c.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/cff7315f-d48d-44d3-b969-ffa9eb7ef740.jpg" alt="Reisemobil Reparatur" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/d8e03477-9198-47a8-97a1-7c14c6c077c6.jpg" alt="Caravan Umbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/daaa4972-aec0-4ad3-b7e9-3bb66790557a.jpg" alt="Wohnmobil Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/e9d7ebcd-41ea-4f87-a4f7-e1d742896bc7.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/ea3897a6-98bf-47cd-9f67-facc7bc0a90c.jpg" alt="Reisemobil Einbau" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/ee7a05e3-a8ac-497a-867e-24998808ad2c.jpg" alt="Caravan Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/f7559acc-70cd-4456-adf5-06101a30751e.jpg" alt="Wohnmobil Wartung" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/fb856a2d-f0cc-4c11-b83c-ab39d32f9a1e.jpg" alt="PlanB Caravaning Service" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item-hidden">
+                    <div class="gallery-item">
+                        <img src="images/alle/00a6e5bf-edec-4291-b8fa-17ee0131732c.jpg" alt="PlanB Caravaning Werkstatt" class="img-fluid rounded shadow-sm gallery-image">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button id="galleryToggleBtn" class="btn btn-primary btn-lg">
+                        <i class="bi bi-chevron-down me-2" id="galleryToggleIcon"></i>
+                        <span id="galleryToggleText">Mehr Bilder anzeigen</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1351,30 +1538,39 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="card shadow-sm">
                         <div class="card-body p-4">
-                            <form>
+                            <form id="contactForm" method="POST" action="contact.php">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" required>
+                                        <input type="text" class="form-control" id="name" name="name" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">E-Mail-Adresse</label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                     <div class="col-12">
                                         <label for="nachricht" class="form-label">Nachricht</label>
-                                        <textarea class="form-control" id="nachricht" rows="5" required></textarea>
+                                        <textarea class="form-control" id="nachricht" name="nachricht" rows="5" required></textarea>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="datenschutz" required>
+                                            <input class="form-check-input" type="checkbox" id="datenschutz" name="datenschutz" required>
                                             <label class="form-check-label" for="datenschutz">
                                                 Hiermit stimme ich zu, dass die Daten gespeichert und zum Zweck der Kontaktaufnahme verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="btn btn-primary btn-lg w-100">Senden</button>
+                                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE" id="recaptcha"></div>
+                                        <div id="recaptcha-error" class="text-danger small mt-2" style="display: none;"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div id="form-message" class="alert" style="display: none;"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                                            <i class="bi bi-send me-2"></i>Nachricht senden
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -1461,15 +1657,28 @@
                 <div class="col-md-6 mb-3 mb-md-0">
                     <h5 class="mb-2"><i class="bi bi-house-heart-fill me-2"></i>PlanB Caravaning</h5>
                     <p class="text-muted mb-0 small">&copy; 2024 PlanB Caravaning. Alle Rechte vorbehalten.</p>
+                    <p class="text-muted mb-0 small mt-2">
+                        <a href="impressum.html" class="text-white-50 text-decoration-none me-3">Impressum</a>
+                        <a href="datenschutz.html" class="text-white-50 text-decoration-none">Datenschutz</a>
+                    </p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage" class="lightbox-image">
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

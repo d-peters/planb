@@ -99,23 +99,80 @@ document.addEventListener('DOMContentLoaded', function() {
     highlightActiveSection(); // Initial check
     
     // Form Submission Handler
-    const contactForm = document.querySelector('form');
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values (handle different form structures)
-            const nameField = document.getElementById('name') || document.getElementById('vorname');
-            const emailField = document.getElementById('email');
-            const nachrichtField = document.getElementById('nachricht');
-            
-            if (nameField && emailField && nachrichtField) {
-                // Show success message (in real application, this would send to server)
-                alert('Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden. Bitte vereinbaren Sie vorab einen Termin für einen Besuch.');
-                
-                // Reset form
-                contactForm.reset();
+            // Check reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                const recaptchaError = document.getElementById('recaptcha-error');
+                if (recaptchaError) {
+                    recaptchaError.textContent = 'Bitte bestätigen Sie, dass Sie kein Roboter sind (reCAPTCHA).';
+                    recaptchaError.style.display = 'block';
+                } else {
+                    alert('Bitte bestätigen Sie, dass Sie kein Roboter sind (reCAPTCHA).');
+                }
+                return;
             }
+            
+            // Hide previous messages
+            const formMessage = document.getElementById('form-message');
+            const recaptchaError = document.getElementById('recaptcha-error');
+            if (formMessage) formMessage.style.display = 'none';
+            if (recaptchaError) recaptchaError.style.display = 'none';
+            
+            // Disable submit button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Wird gesendet...';
+            
+            // Form data sammeln
+            const formData = new FormData(contactForm);
+            formData.append('g-recaptcha-response', recaptchaResponse);
+            
+            // AJAX Request
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show message
+                if (formMessage) {
+                    formMessage.className = 'alert ' + (data.success ? 'alert-success' : 'alert-danger');
+                    formMessage.textContent = data.message;
+                    formMessage.style.display = 'block';
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    alert(data.message);
+                }
+                
+                // Reset form if successful
+                if (data.success) {
+                    contactForm.reset();
+                    grecaptcha.reset();
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                if (formMessage) {
+                    formMessage.className = 'alert alert-danger';
+                    formMessage.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns telefonisch.';
+                    formMessage.style.display = 'block';
+                } else {
+                    alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns telefonisch.');
+                }
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
         });
     }
     
@@ -368,31 +425,129 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Partner Cards Collapse Logic
+    // Partner Details Data
+    const partnerDetails = {
+        partner1: {
+            name: 'Alde',
+            logo: 'images/logos/alde.png',
+            description: 'Alde ist ein führender Hersteller von Heizungs- und Warmwassersystemen für Reisemobile und Caravans. Die schwedische Firma entwickelt innovative Flüssiggas- und Dieselheizungen, die für zuverlässige Wärme und Komfort auf Reisen sorgen. Alde-Systeme zeichnen sich durch ihre Energieeffizienz, leise Betriebsweise und innovative Technologie aus.',
+            url: 'https://www.alde.se/'
+        },
+        partner2: {
+            name: 'AL-KO-Sawiko',
+            logo: 'images/logos/al-ko-sawiko.png',
+            description: 'AL-KO-Sawiko ist ein bekannter Hersteller von Fahrwerkskomponenten und Zubehör für Caravans und Wohnmobile. Das Unternehmen bietet hochwertige Achsen, Stabilisatoren, Stoßdämpfer und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. AL-KO-Produkte stehen für Qualität und Langlebigkeit.',
+            url: 'https://www.al-ko.com/'
+        },
+        partner3: {
+            name: 'Büttner Elektronik',
+            logo: 'images/logos/buettner-elektronik.png',
+            description: 'Büttner Elektronik entwickelt und produziert innovative elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Die Firma bietet Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren.',
+            url: 'https://www.buettner-elektronik.de/'
+        },
+        partner4: {
+            name: 'BullTron',
+            logo: 'images/logos/bulltron.png',
+            description: 'BullTron ist ein Spezialist für elektronische Steuerungssysteme und Sicherheitstechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Alarmanlagen, Zentralverriegelungen, Fernbedienungen und intelligente Steuerungssysteme, die Sicherheit und Komfort im Wohnmobil erhöhen.',
+            url: 'https://www.bulltron.de/'
+        },
+        partner5: {
+            name: 'Clesana',
+            logo: 'images/logos/clesana.avif',
+            description: 'Clesana ist ein führender Hersteller von Sanitär- und Abwassersystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Waschbecken, Duschkabinen und Abwassersysteme, die für Hygiene und Komfort auf Reisen sorgen. Clesana-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.',
+            url: 'https://www.clesana.com/'
+        },
+        partner6: {
+            name: 'Eberspächer',
+            logo: 'images/logos/eberspaecher.svg',
+            description: 'Eberspächer ist ein weltweit führender Hersteller von Standheizungen und Abgassystemen für Fahrzeuge. Die Firma entwickelt innovative Diesel- und Benzinstandheizungen, die unabhängig vom Motor für Wärme sorgen. Eberspächer-Systeme sind bekannt für ihre Zuverlässigkeit, Effizienz und innovative Technologie.',
+            url: 'https://www.eberspaecher.com/'
+        },
+        partner7: {
+            name: 'Frankana/Freiko',
+            logo: 'images/logos/frankana-freiko.png',
+            description: 'Frankana/Freiko ist ein Spezialist für Fahrwerkskomponenten und Sicherheitstechnik für Caravans. Das Unternehmen bietet hochwertige Stabilisatoren, Kupplungen, Achsen und weitere Fahrwerkskomponenten, die für sicheres und komfortables Fahren sorgen. Die Produkte stehen für Qualität und Innovation.',
+            url: 'https://www.frankana.de/'
+        },
+        partner8: {
+            name: 'EP - HPC - Linnepe',
+            logo: 'images/logos/ep-hpc-linnepe.png',
+            description: 'EP - HPC - Linnepe ist ein Hersteller von hochwertigen Fahrwerkskomponenten und Zubehör für Caravans. Das Unternehmen bietet innovative Lösungen für Achsen, Stabilisatoren und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. Die Produkte zeichnen sich durch ihre Qualität und Langlebigkeit aus.',
+            url: 'https://www.linnepe.eu/'
+        },
+        partner9: {
+            name: 'Ten Haaft Oyster',
+            logo: 'images/logos/ten-haaft-oyster.webp',
+            description: 'Ten Haaft Oyster ist ein führender Hersteller von Satelliten- und Internetanlagen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Satellitensysteme und Internetverbindungen, die für Unterhaltung und Kommunikation auf Reisen sorgen. Die Produkte zeichnen sich durch ihre Qualität, Zuverlässigkeit und einfache Installation aus.',
+            url: 'https://www.ten-haaft.com/'
+        },
+        partner10: {
+            name: 'IntelliRoute',
+            logo: 'images/logos/intelliroute.png',
+            description: 'IntelliRoute entwickelt intelligente Navigations- und Routenplanungssysteme speziell für Reisemobile. Das Unternehmen bietet Lösungen, die die spezifischen Anforderungen von Wohnmobilen berücksichtigen, wie Höhenbeschränkungen, Gewichtsbeschränkungen und Stellplatzsuche. Die Systeme helfen dabei, die optimale Route für Reisemobile zu finden.',
+            url: 'https://www.intelliroute.eu/'
+        },
+        partner11: {
+            name: 'SOG Systeme',
+            logo: 'images/logos/sog-systeme.png',
+            description: 'SOG Systeme ist ein Spezialist für Abwassersysteme und Sanitärtechnik für Reisemobile. Das Unternehmen bietet innovative Lösungen für Toiletten, Abwassersysteme und Sanitärkomponenten, die für Hygiene und Komfort sorgen. SOG-Produkte zeichnen sich durch ihre Zuverlässigkeit und einfache Wartung aus.',
+            url: 'https://www.sog-systeme.de/'
+        },
+        partner12: {
+            name: 'TELECO',
+            logo: 'images/logos/teleco.png',
+            description: 'TELECO ist ein führender Hersteller von Satelliten- und TV-Systemen für Reisemobile. Das Unternehmen bietet innovative Lösungen für Satellitenantennen, TV-Systeme und Multimedia-Komponenten, die für Unterhaltung und Information auf Reisen sorgen. TELECO-Produkte zeichnen sich durch ihre Qualität und einfache Installation aus.',
+            url: 'https://www.telecogroup.com/'
+        },
+        partner13: {
+            name: 'Thetford',
+            logo: 'images/logos/thetford.png',
+            description: 'Thetford ist ein weltweit führender Hersteller von Sanitär- und Kühlsystemen für Reisemobile. Das Unternehmen bietet hochwertige Toiletten, Kühlschränke, Herde und weitere Küchenkomponenten, die für Komfort und Hygiene auf Reisen sorgen. Thetford-Produkte sind bekannt für ihre Qualität, Zuverlässigkeit und innovative Technologie.',
+            url: 'https://www.thetford.com/'
+        },
+        partner14: {
+            name: 'THITRONIK',
+            logo: 'images/logos/thitronik.svg',
+            description: 'THITRONIK ist ein Spezialist für elektronische Steuerungs- und Überwachungssysteme für Reisemobile. Das Unternehmen bietet innovative Lösungen für Batteriemanagement, Spannungsüberwachung, Solarregler und intelligente Steuerungssysteme, die den Komfort und die Energieeffizienz im Wohnmobil optimieren. THITRONIK-Produkte zeichnen sich durch ihre Zuverlässigkeit und innovative Technologie aus.',
+            url: 'https://www.thitronik.de/'
+        }
+    };
+    
+    // Partner Card Click Handler (similar to Service Cards)
     const partnerCardHeaders = document.querySelectorAll('.partner-card-header[data-partner]');
     let currentPartner = null;
+    let currentPartnerRow = null;
     
     partnerCardHeaders.forEach(header => {
-        header.addEventListener('click', function(e) {
-            // Don't trigger if clicking the toggle button directly
-            if (e.target.closest('.partner-toggle-btn')) {
-                return;
-            }
-            
+        header.addEventListener('click', function() {
             const partnerId = this.getAttribute('data-partner');
+            const rowNumber = this.getAttribute('data-row');
+            const partnerData = partnerDetails[partnerId];
             const partnerNum = partnerId.replace('partner', '');
-            const targetPanel = document.getElementById(`partnerDetailsPanel${partnerNum}`);
-            
-            if (!targetPanel) return;
-            
             const toggleBtn = this.querySelector('.partner-toggle-btn');
             const toggleIcon = toggleBtn.querySelector('i');
             
-            // Toggle active state
-            const isActive = this.classList.contains('active');
+            // Check if mobile or desktop
+            const isMobile = window.innerWidth <= 768;
             
-            if (isActive) {
-                // Close this panel
+            // Get the appropriate panel (mobile or desktop)
+            let targetPanel, targetContent;
+            if (isMobile) {
+                targetPanel = document.getElementById(`partnerDetailsPanelMobile${partnerNum}`);
+                targetContent = targetPanel.querySelector(`.partner-details-content-mobile${partnerNum}`);
+            } else {
+                targetPanel = document.getElementById(`partnerDetailsPanelRow${rowNumber}`);
+                targetContent = targetPanel.querySelector(`.partner-details-content-row${rowNumber}`);
+            }
+            
+            if (!targetPanel || !targetContent) return;
+            
+            // Check if same partner and panel is open
+            const isSamePartner = currentPartner === partnerId && currentPartnerRow === rowNumber;
+            const isPanelOpen = targetPanel.classList.contains('show');
+            
+            if (isSamePartner && isPanelOpen) {
+                // Close current panel
                 const bsCollapse = new bootstrap.Collapse(targetPanel, {
                     toggle: false
                 });
@@ -400,20 +555,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.remove('active');
                 toggleIcon.style.transform = 'rotate(0deg)';
                 currentPartner = null;
+                currentPartnerRow = null;
             } else {
                 // Close other panels
-                partnerCardHeaders.forEach(h => {
-                    if (h !== this) {
-                        h.classList.remove('active');
-                        const btn = h.querySelector('.partner-toggle-btn');
-                        const icon = btn.querySelector('i');
-                        icon.style.transform = 'rotate(0deg)';
-                        
-                        const otherPartnerId = h.getAttribute('data-partner');
-                        const otherPartnerNum = otherPartnerId.replace('partner', '');
-                        const otherPanel = document.getElementById(`partnerDetailsPanel${otherPartnerNum}`);
-                        if (otherPanel && otherPanel.classList.contains('show')) {
-                            const bsCollapse = new bootstrap.Collapse(otherPanel, {
+                document.querySelectorAll('.partner-details-panel-wrapper').forEach(panel => {
+                    if (isMobile) {
+                        // On mobile, close all mobile panels except current
+                        if (panel.classList.contains('partner-panel-mobile') && panel !== targetPanel && panel.classList.contains('show')) {
+                            const bsCollapse = new bootstrap.Collapse(panel, {
+                                toggle: false
+                            });
+                            bsCollapse.hide();
+                        }
+                    } else {
+                        // On desktop, close all desktop panels except current row
+                        if (!panel.classList.contains('partner-panel-mobile') && panel !== targetPanel && panel.classList.contains('show')) {
+                            const bsCollapse = new bootstrap.Collapse(panel, {
                                 toggle: false
                             });
                             bsCollapse.hide();
@@ -421,10 +578,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
+                // Reset all headers
+                partnerCardHeaders.forEach(h => {
+                    h.classList.remove('active');
+                    const btn = h.querySelector('.partner-toggle-btn');
+                    const icon = btn.querySelector('i');
+                    btn.classList.remove('active');
+                    icon.style.transform = 'rotate(0deg)';
+                });
+                
+                // Fill content
+                targetContent.innerHTML = `
+                    <h4><img src="${partnerData.logo}" alt="${partnerData.name} Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">${partnerData.name}</h4>
+                    <p>${partnerData.description}</p>
+                    <a href="${partnerData.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-3">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>Mehr erfahren
+                    </a>
+                `;
+                
                 // Open this panel
                 this.classList.add('active');
                 toggleIcon.style.transform = 'rotate(180deg)';
                 currentPartner = partnerId;
+                currentPartnerRow = rowNumber;
                 
                 const bsCollapse = new bootstrap.Collapse(targetPanel, {
                     toggle: false
@@ -432,34 +608,222 @@ document.addEventListener('DOMContentLoaded', function() {
                 bsCollapse.show();
             }
         });
-        
-        // Also handle toggle button clicks
-        const toggleBtn = header.querySelector('.partner-toggle-btn');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                header.click();
-            });
-        }
     });
     
     // Handle panel close
     document.querySelectorAll('.partner-details-panel-wrapper').forEach(panel => {
         panel.addEventListener('hidden.bs.collapse', function() {
-            const partnerNum = this.id.replace('partnerDetailsPanel', '');
-            const partnerId = `partner${partnerNum}`;
+            const isMobile = window.innerWidth <= 768;
             
-            if (currentPartner === partnerId) {
-                partnerCardHeaders.forEach(header => {
-                    if (header.getAttribute('data-partner') === partnerId) {
-                        header.classList.remove('active');
-                        const btn = header.querySelector('.partner-toggle-btn');
-                        const icon = btn.querySelector('i');
-                        icon.style.transform = 'rotate(0deg)';
-                    }
-                });
-                currentPartner = null;
+            if (isMobile) {
+                // Mobile: find partner number from panel ID
+                const partnerNum = this.id.replace('partnerDetailsPanelMobile', '');
+                const partnerId = `partner${partnerNum}`;
+                
+                if (currentPartner === partnerId) {
+                    partnerCardHeaders.forEach(header => {
+                        if (header.getAttribute('data-partner') === partnerId) {
+                            header.classList.remove('active');
+                            const btn = header.querySelector('.partner-toggle-btn');
+                            const icon = btn.querySelector('i');
+                            btn.classList.remove('active');
+                            icon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    currentPartner = null;
+                    currentPartnerRow = null;
+                }
+            } else {
+                // Desktop: find row number from panel ID
+                const rowNum = this.id.replace('partnerDetailsPanelRow', '');
+                const rowId = rowNum;
+                
+                if (currentPartnerRow === rowId) {
+                    partnerCardHeaders.forEach(header => {
+                        if (header.getAttribute('data-row') === rowId) {
+                            header.classList.remove('active');
+                            const btn = header.querySelector('.partner-toggle-btn');
+                            const icon = btn.querySelector('i');
+                            btn.classList.remove('active');
+                            icon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    currentPartner = null;
+                    currentPartnerRow = null;
+                }
             }
         });
     });
+    
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    
+    let currentImageIndex = 0;
+    const images = Array.from(galleryItems).map(img => ({
+        src: img.src,
+        alt: img.alt
+    }));
+    
+    // Open lightbox
+    function openLightbox(index) {
+        currentImageIndex = index;
+        updateLightboxImage();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Update lightbox image
+    function updateLightboxImage() {
+        if (images.length > 0 && currentImageIndex >= 0 && currentImageIndex < images.length) {
+            lightboxImage.src = images[currentImageIndex].src;
+            lightboxImage.alt = images[currentImageIndex].alt;
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+        }
+    }
+    
+    // Show previous image
+    function showPrevImage() {
+        if (images.length > 0) {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        }
+    }
+    
+    // Show next image
+    function showNextImage() {
+        if (images.length > 0) {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateLightboxImage();
+        }
+    }
+    
+    // Add click event to gallery images
+    galleryItems.forEach((img, index) => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            openLightbox(index);
+        });
+    });
+    
+    // Close button
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+    
+    // Previous button
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showPrevImage();
+        });
+    }
+    
+    // Next button
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showNextImage();
+        });
+    }
+    
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('active')) {
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrevImage();
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+            }
+        }
+    });
+    
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    lightboxImage.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    lightboxImage.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50; // Minimum swipe distance
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next image
+                showNextImage();
+            } else {
+                // Swipe right - previous image
+                showPrevImage();
+            }
+        }
+    }
+    
+    // Gallery Toggle Functionality
+    const galleryToggleBtn = document.getElementById('galleryToggleBtn');
+    const galleryToggleIcon = document.getElementById('galleryToggleIcon');
+    const galleryToggleText = document.getElementById('galleryToggleText');
+    const hiddenGalleryItems = document.querySelectorAll('.gallery-item-hidden');
+    
+    let galleryExpanded = false;
+    
+    if (galleryToggleBtn && hiddenGalleryItems.length > 0) {
+        galleryToggleBtn.addEventListener('click', function() {
+            galleryExpanded = !galleryExpanded;
+            
+            hiddenGalleryItems.forEach((item, index) => {
+                if (galleryExpanded) {
+                    // Show with staggered animation
+                    setTimeout(() => {
+                        item.classList.add('show');
+                    }, index * 30); // Small delay for each item
+                } else {
+                    // Hide immediately
+                    item.classList.remove('show');
+                }
+            });
+            
+            // Update button text and icon
+            if (galleryExpanded) {
+                galleryToggleText.textContent = 'Weniger Bilder anzeigen';
+                galleryToggleIcon.classList.remove('bi-chevron-down');
+                galleryToggleIcon.classList.add('bi-chevron-up');
+            } else {
+                galleryToggleText.textContent = 'Mehr Bilder anzeigen';
+                galleryToggleIcon.classList.remove('bi-chevron-up');
+                galleryToggleIcon.classList.add('bi-chevron-down');
+            }
+        });
+    }
 });
