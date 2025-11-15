@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll to top functionality (optional)
     let scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
-    scrollTopBtn.className = 'btn btn-primary rounded-circle position-fixed';
+    scrollTopBtn.className = 'btn btn-primary rounded-circle position-fixed scroll-to-top-btn';
     scrollTopBtn.style.cssText = 'bottom: 30px; right: 30px; width: 50px; height: 50px; z-index: 1000; display: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3);';
     document.body.appendChild(scrollTopBtn);
     
