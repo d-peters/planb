@@ -1000,6 +1000,18 @@ section {
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
+    color: var(--gray-700);
+}
+
+.help-you-text {
+    background: var(--orange-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: inline-block;
+    position: relative;
 }
 
 .about-text {
@@ -2303,6 +2315,17 @@ html {
 .partner-card-header:hover .partner-logo[src*="default-partner-logo.svg"] {
     opacity: 0.9;
     color: var(--primary-700);
+}
+
+/* Truma Logo - weiß zu schwarz konvertieren */
+.partner-logo[src*="truma-logo"] {
+    filter: brightness(0);
+    opacity: 1;
+}
+
+.partner-card-header:hover .partner-logo[src*="truma-logo"] {
+    filter: brightness(0);
+    opacity: 1;
 }
 
 

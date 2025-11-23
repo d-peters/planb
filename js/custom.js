@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
         service9: {
             title: 'Zubehör & Ersatzteile',
             icon: 'bi-box-seam',
-            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil benötigen. Durch unsere langjährigen Partnerschaften mit namhaften Herstellern hochwertiger Produkte zu fairen Preisen. Gerne beraten wir Sie bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
+            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil benötigen. Durch unsere langjährigen Partnerschaften mit namhaften Herstellern hochwertiger Produkte können wir diese zu fairen Preisen anbieten. Gerne beraten wir Sie bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
         }
     };
     
