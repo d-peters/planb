@@ -246,12 +246,12 @@ document.addEventListener('DOMContentLoaded', function() {
         service5: {
             title: 'Concorde Service',
             icon: 'bi-shield-check',
-            content: 'Als offizieller Concorde Reisemobile Servicepartner sind wir stolz darauf ein Teil der Concorde Familie zu sein und bieten wir Ihnen die volle Expertise für alle Concorde Modelle. Wir führen Wartungen, Dichtigkeitsprüfungen Reparaturen und Serviceleistungen nach Herstellervorgaben durch und haben Zugriff auf Original-Ersatzteile . Unsere Techniker sind speziell für Concorde Fahrzeuge geschult und kennen die Besonderheiten dieser hochwertigen Reisemobile.'
+            content: 'Als offizieller Concorde Reisemobile Servicepartner sind wir stolz darauf, ein Teil der Concorde Familie zu sein und bieten wir Ihnen die volle Expertise für alle Concorde Modelle. Wir führen Wartungen, Dichtigkeitsprüfungen, Reparaturen und Serviceleistungen nach Herstellervorgaben durch und haben Zugriff auf Original-Ersatzteile. Unsere Techniker sind speziell für Concorde Fahrzeuge geschult und kennen die Besonderheiten dieser hochwertigen Reisemobile.'
         },
         service6: {
             title: 'Dometic Service',
             icon: 'bi-snow',
-            content: 'Als autorisierter Dometic Service Provider kümmern wir uns um alle Dometic Geräte in Ihrem Fahrzeug. Ob Kühlschrank, Klimaanlage, Heizung, Toilette oder andere Dometic Produkte wir reparieren, warten und installieren diese Geräte fachgerecht. Wir haben Zugriff auf Original-Ersatzteile und Service-Dokumentationen. Unsere Techniker sind regelmäßig geschult und kennen die Dometic Produkte und deren Besonderheiten.'
+            content: 'Als autorisierter Dometic Service Provider kümmern wir uns um alle Dometic Geräte in Ihrem Fahrzeug. Ob Kühlschrank, Klimaanlage, Heizung, Toilette oder andere Dometic Produkte, wir reparieren, warten und installieren diese Geräte fachgerecht. Wir haben Zugriff auf Original-Ersatzteile und Service-Dokumentationen. Unsere Techniker sind regelmäßig geschult und kennen die Dometic Produkte und deren Besonderheiten.'
         },
         service7: {
             title: 'PlanB Caravan Energy',
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
         service9: {
             title: 'Zubehör & Ersatzteile',
             icon: 'bi-box-seam',
-            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil benötigen. Durch unsere langjährigen Partnerschaften mit namhaften Herstellern hochwertiger Produkte können wir diese zu fairen Preisen anbieten. Gerne beraten wir Sie bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
+            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil benötigen. Durch unsere langjährigen Partnerschaften mit namhaften Herstellern hochwertiger Produkte, können wir diese zu fairen Preisen anbieten. Gerne beraten wir Sie bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
         }
     };
     
