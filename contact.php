@@ -15,7 +15,7 @@ define('RECAPTCHA_SECRET_KEY', 'YOUR_SECRET_KEY_HERE');
 // E-Mail Konfiguration
 define('TO_EMAIL', 'info@planb-caravaning.de'); // Ihre E-Mail-Adresse
 define('FROM_EMAIL', 'noreply@planb-caravaning.de'); // Absender E-Mail
-define('FROM_NAME', 'PlanB Caravaning Kontaktformular');
+define('FROM_NAME', 'PlanB Kontaktformular');
 
 // Funktion zur reCAPTCHA Validierung
 function validateRecaptcha($response) {

@@ -1,7 +1,7 @@
-// Custom JavaScript for PlanB Caravaning Website
+// Custom JavaScript for PlanB Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('PlanB Caravaning Website geladen!');
+    console.log('PlanB Website geladen!');
     
     
     // Mobile Menu Dropdown Toggle
@@ -226,47 +226,47 @@ document.addEventListener('DOMContentLoaded', function() {
         service1: {
             title: 'Instandsetzungen',
             icon: 'bi-tools',
-            content: 'Wir reparieren und setzen Ihr Reisemobil oder Caravan fachgerecht instand. Von kleineren Schäden bis hin zu umfangreichen Reparaturen – unsere erfahrenen Techniker sorgen dafür, dass Ihr Fahrzeug wieder in bestem Zustand ist. Wir arbeiten mit hochwertigen Materialien und Ersatzteilen und garantieren eine sorgfältige Ausführung aller Arbeiten. Egal ob Schäden am Aufbau, an der Elektrik oder an der Mechanik – wir finden die passende Lösung für Ihr Problem.'
+            content: 'Wir reparieren und setzen Ihr Reisemobil fachgerecht instand. Von kleineren Schäden bis hin zu umfangreichen Reparaturen – unsere erfahrenen Techniker sorgen dafür, dass Ihr Fahrzeug wieder in bestem Zustand ist. Wir arbeiten mit hochwertigen Materialien und Ersatzteilen und garantieren eine sorgfältige Ausführung aller Arbeiten. Egal ob Schäden am Aufbau, an der Elektrik oder an der Mechanik – wir finden die passende Lösung für Ihr Problem.'
         },
         service2: {
             title: 'Einbauten',
             icon: 'bi-wrench-adjustable',
-            content: 'Wir installieren professionell Zubehör und Ausstattung in Ihr Reisemobil oder Caravan. Ob Solaranlagen, Satellitensysteme, Fahrradträger oder zusätzliche Batterien – wir planen und realisieren jeden Einbau sorgfältig und nach Herstellerrichtlinien. Dabei achten wir auf eine saubere Verlegung von Kabeln und Leitungen sowie auf die Einhaltung aller Sicherheitsstandards. Lassen Sie sich von uns beraten, welche Einbauten für Ihr Fahrzeug sinnvoll sind.'
+            content: 'Wir installieren professionell Zubehör und Ausstattung in Ihr Reisemobil. Wir planen und realisieren mit Ihnen zusammen jeden Einbau sorgfältig und nach Herstellerrichtlinien. Dabei achten wir auf eine saubere Verlegung von Kabeln und Leitungen sowie auf die Einhaltung aller Sicherheitsstandards.'
         },
         service3: {
             title: 'Umbauten',
             icon: 'bi-gear-wide-connected',
-            content: 'Individuelle Umbauten nach Ihren persönlichen Wünschen und Anforderungen. Wir verwandeln Ihr Reisemobil oder Caravan nach Ihren Vorstellungen – ob es um die Optimierung des Innenraums, den Einbau zusätzlicher Schränke, die Erweiterung der Küche oder die Anpassung der Schlafplätze geht. In einem ausführlichen Beratungsgespräch erarbeiten wir gemeinsam die beste Lösung für Ihre Bedürfnisse und setzen diese dann präzise um.'
+            content: 'Individuelle Umbauten nach Ihren persönlichen Wünschen und Anforderungen. Wir verwandeln Ihr Reisemobil nach Ihren Vorstellungen. In einem ausführlichen Beratungsgespräch erarbeiten wir gemeinsam die beste Lösung für Ihre Bedürfnisse und setzen diese dann präzise um.'
         },
         service4: {
             title: 'Gastanks Einbau & Prüfung',
             icon: 'bi-fuel-pump',
-            content: 'Der sichere Einbau und die regelmäßige Prüfung von Gastanks ist eine unserer Kernkompetenzen. Wir führen alle Arbeiten nach den geltenden Vorschriften und Sicherheitsstandards durch. Dazu gehören die fachgerechte Installation, die Dichtheitsprüfung sowie die regelmäßige Überprüfung bestehender Anlagen. Wir dokumentieren alle Arbeiten sorgfältig und stellen Ihnen die erforderlichen Nachweise aus. Ihre Sicherheit steht bei uns an erster Stelle.'
+            content: 'Der sichere Einbau und die regelmäßige Prüfung von Gastanks  und Gastankflaschen ist eine unserer Kernkompetenzen. Wir führen alle Arbeiten nach den geltenden Vorschriften und Sicherheitsstandards durch. Dazu gehören die fachgerechten Gasprüfungen sowie die regelmäßige Überprüfung bestehender Anlagen. Wir dokumentieren alle Arbeiten sorgfältig und stellen Ihnen die erforderlichen Nachweise aus. Ihre Sicherheit steht bei uns an erster Stelle.'
         },
         service5: {
             title: 'Concorde Service',
             icon: 'bi-shield-check',
-            content: 'Als offizieller Concorde Reisemobile Servicepartner bieten wir Ihnen die volle Expertise für alle Concorde Modelle. Wir führen Wartungen, Reparaturen und Serviceleistungen nach Herstellervorgaben durch und haben Zugriff auf Original-Ersatzteile. Unsere Techniker sind speziell für Concorde Fahrzeuge geschult und kennen die Besonderheiten dieser hochwertigen Reisemobile. Profitieren Sie von unserer langjährigen Erfahrung und dem direkten Zugang zu Concorde-Serviceinformationen.'
+            content: 'Als offizieller Concorde Reisemobile Servicepartner sind wir stolz darauf ein Teil der Concorde Familie zu sein und bieten wir Ihnen die volle Expertise für alle Concorde Modelle. Wir führen Wartungen, Dichtigkeitsprüfungen Reparaturen und Serviceleistungen nach Herstellervorgaben durch und haben Zugriff auf Original-Ersatzteile . Unsere Techniker sind speziell für Concorde Fahrzeuge geschult und kennen die Besonderheiten dieser hochwertigen Reisemobile.'
         },
         service6: {
             title: 'Dometic Service',
             icon: 'bi-snow',
-            content: 'Als autorisierter Dometic Service Provider kümmern wir uns um alle Dometic Geräte in Ihrem Fahrzeug. Ob Kühlschrank, Klimaanlage, Heizung, Toilette oder andere Dometic Produkte – wir reparieren, warten und installieren diese Geräte fachgerecht. Wir haben Zugriff auf Original-Ersatzteile und Service-Dokumentationen. Unsere Techniker sind regelmäßig geschult und kennen die neuesten Dometic Produkte und deren Besonderheiten.'
+            content: 'Als autorisierter Dometic Service Provider kümmern wir uns um alle Dometic Geräte in Ihrem Fahrzeug. Ob Kühlschrank, Klimaanlage, Heizung, Toilette oder andere Dometic Produkte wir reparieren, warten und installieren diese Geräte fachgerecht. Wir haben Zugriff auf Original-Ersatzteile und Service-Dokumentationen. Unsere Techniker sind regelmäßig geschult und kennen die Dometic Produkte und deren Besonderheiten.'
         },
         service7: {
-            title: 'Technische Prüfung',
+            title: 'PlanB Caravan Energy',
             icon: 'bi-clipboard-check',
-            content: 'Vor dem Kauf eines gebrauchten Reisemobils empfehlen wir eine umfassende technische Prüfung. Wir untersuchen alle wichtigen Komponenten wie Aufbau, Elektrik, Wasser- und Gasanlage, Fahrwerk und Motor. Sie erhalten von uns einen detaillierten Zustandsbericht mit allen festgestellten Mängeln und einer realistischen Einschätzung des Fahrzeugzustands. Diese Prüfung gibt Ihnen Sicherheit bei Ihrer Kaufentscheidung und kann bei Preisverhandlungen hilfreich sein.'
+            content: 'Hier stellen wir Ihnen in naher Zukunft unsere elektronischen Eigenmarken wie unsere Eigenmarke Lithium Batterien vor.'
         },
         service8: {
             title: 'Schnäppchenecke',
             icon: 'bi-tag-fill',
-            content: 'In unserer Schnäppchenecke finden Sie regelmäßig exklusive Angebote und Sonderpreise für Reisemobile, und hochwertiges Zubehör. Wir bieten Ihnen Vorführfahrzeuge, Ausstellungsstücke und Sonderaktionen zu besonders attraktiven Konditionen. Lassen Sie sich von unseren aktuellen Schnäppchen überraschen und sparen Sie bares Geld bei Ihrem Traumfahrzeug oder beim passenden Zubehör. Schauen Sie regelmäßig vorbei, denn unsere Angebote wechseln und sind oft nur für kurze Zeit verfügbar.'
+            content: 'In unserer Schnäppchenecke finden Sie Sonderpreise hochwertiger Zubehörteile aus unserem Abverkauf.'
         },
         service9: {
             title: 'Zubehör & Ersatzteile',
             icon: 'bi-box-seam',
-            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil oder Caravan benötigen. Durch unsere langjährigen Partnerschaften können wir Ihnen qualitativ hochwertige Produkte zu fairen Preisen anbieten. Gerne beraten wir Sie auch bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
+            content: 'Wir führen ein umfangreiches Sortiment an Zubehör und Ersatzteilen von unseren Partnern. Von praktischem Reisezubehör über technische Komponenten bis hin zu Original-Ersatzteilen – bei uns finden Sie alles, was Sie für Ihr Reisemobil benötigen. Durch unsere langjährigen Partnerschaften mit namhaften Herstellern hochwertiger Produkte zu fairen Preisen. Gerne beraten wir Sie bei der Auswahl des passenden Zubehörs für Ihre individuellen Bedürfnisse.'
         }
     };
     
@@ -430,13 +430,13 @@ document.addEventListener('DOMContentLoaded', function() {
         partner1: {
             name: 'Alde',
             logo: 'images/logos/alde.png',
-            description: 'Alde ist ein führender Hersteller von Heizungs- und Warmwassersystemen für Reisemobile und Caravans. Die schwedische Firma entwickelt innovative Flüssiggas- und Dieselheizungen, die für zuverlässige Wärme und Komfort auf Reisen sorgen. Alde-Systeme zeichnen sich durch ihre Energieeffizienz, leise Betriebsweise und innovative Technologie aus.',
+            description: 'Alde ist ein führender Hersteller von Heizungs- und Warmwassersystemen für Reisemobile. Die schwedische Firma entwickelt innovative Flüssiggas- und Dieselheizungen, die für zuverlässige Wärme und Komfort auf Reisen sorgen. Alde-Systeme zeichnen sich durch ihre Energieeffizienz, leise Betriebsweise und innovative Technologie aus.',
             url: 'https://www.alde.se/'
         },
         partner2: {
             name: 'AL-KO-Sawiko',
             logo: 'images/logos/al-ko-sawiko.png',
-            description: 'AL-KO-Sawiko ist ein bekannter Hersteller von Fahrwerkskomponenten und Zubehör für Caravans und Wohnmobile. Das Unternehmen bietet hochwertige Achsen, Stabilisatoren, Stoßdämpfer und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. AL-KO-Produkte stehen für Qualität und Langlebigkeit.',
+            description: 'AL-KO-Sawiko ist ein bekannter Hersteller von Fahrwerkskomponenten und Zubehör für Wohnmobile. Das Unternehmen bietet hochwertige Achsen, Stabilisatoren, Stoßdämpfer und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. AL-KO-Produkte stehen für Qualität und Langlebigkeit.',
             url: 'https://www.al-ko.com/'
         },
         partner3: {
@@ -466,13 +466,13 @@ document.addEventListener('DOMContentLoaded', function() {
         partner7: {
             name: 'Frankana/Freiko',
             logo: 'images/logos/frankana-freiko.png',
-            description: 'Frankana/Freiko ist ein Spezialist für Fahrwerkskomponenten und Sicherheitstechnik für Caravans. Das Unternehmen bietet hochwertige Stabilisatoren, Kupplungen, Achsen und weitere Fahrwerkskomponenten, die für sicheres und komfortables Fahren sorgen. Die Produkte stehen für Qualität und Innovation.',
+            description: 'Frankana/Freiko ist ein Spezialist für Fahrwerkskomponenten und Sicherheitstechnik für Reisemobile. Das Unternehmen bietet hochwertige Stabilisatoren, Kupplungen, Achsen und weitere Fahrwerkskomponenten, die für sicheres und komfortables Fahren sorgen. Die Produkte stehen für Qualität und Innovation.',
             url: 'https://www.frankana.de/'
         },
         partner8: {
-            name: 'EP - HPC - Linnepe',
+            name: 'Linnepe',
             logo: 'images/logos/ep-hpc-linnepe.png',
-            description: 'EP - HPC - Linnepe ist ein Hersteller von hochwertigen Fahrwerkskomponenten und Zubehör für Caravans. Das Unternehmen bietet innovative Lösungen für Achsen, Stabilisatoren und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. Die Produkte zeichnen sich durch ihre Qualität und Langlebigkeit aus.',
+            description: 'Linnepe ist ein Hersteller von hochwertigen Fahrwerkskomponenten und Zubehör für Reisemobile. Das Unternehmen bietet innovative Lösungen für Achsen, Stabilisatoren und weitere Fahrwerkskomponenten, die für Sicherheit und Komfort beim Fahren sorgen. Die Produkte zeichnen sich durch ihre Qualität und Langlebigkeit aus.',
             url: 'https://www.linnepe.eu/'
         },
         partner9: {
@@ -513,147 +513,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Partner Card Click Handler (similar to Service Cards)
-    const partnerCardHeaders = document.querySelectorAll('.partner-card-header[data-partner]');
-    let currentPartner = null;
-    let currentPartnerRow = null;
-    
-    partnerCardHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const partnerId = this.getAttribute('data-partner');
-            const rowNumber = this.getAttribute('data-row');
-            const partnerData = partnerDetails[partnerId];
-            const partnerNum = partnerId.replace('partner', '');
-            const toggleBtn = this.querySelector('.partner-toggle-btn');
-            const toggleIcon = toggleBtn.querySelector('i');
-            
-            // Check if mobile or desktop
-            const isMobile = window.innerWidth <= 768;
-            
-            // Get the appropriate panel (mobile or desktop)
-            let targetPanel, targetContent;
-            if (isMobile) {
-                targetPanel = document.getElementById(`partnerDetailsPanelMobile${partnerNum}`);
-                targetContent = targetPanel.querySelector(`.partner-details-content-mobile${partnerNum}`);
-            } else {
-                targetPanel = document.getElementById(`partnerDetailsPanelRow${rowNumber}`);
-                targetContent = targetPanel.querySelector(`.partner-details-content-row${rowNumber}`);
-            }
-            
-            if (!targetPanel || !targetContent) return;
-            
-            // Check if same partner and panel is open
-            const isSamePartner = currentPartner === partnerId && currentPartnerRow === rowNumber;
-            const isPanelOpen = targetPanel.classList.contains('show');
-            
-            if (isSamePartner && isPanelOpen) {
-                // Close current panel
-                const bsCollapse = new bootstrap.Collapse(targetPanel, {
-                    toggle: false
-                });
-                bsCollapse.hide();
-                this.classList.remove('active');
-                toggleIcon.style.transform = 'rotate(0deg)';
-                currentPartner = null;
-                currentPartnerRow = null;
-            } else {
-                // Close other panels
-                document.querySelectorAll('.partner-details-panel-wrapper').forEach(panel => {
-                    if (isMobile) {
-                        // On mobile, close all mobile panels except current
-                        if (panel.classList.contains('partner-panel-mobile') && panel !== targetPanel && panel.classList.contains('show')) {
-                            const bsCollapse = new bootstrap.Collapse(panel, {
-                                toggle: false
-                            });
-                            bsCollapse.hide();
-                        }
-                    } else {
-                        // On desktop, close all desktop panels except current row
-                        if (!panel.classList.contains('partner-panel-mobile') && panel !== targetPanel && panel.classList.contains('show')) {
-                            const bsCollapse = new bootstrap.Collapse(panel, {
-                                toggle: false
-                            });
-                            bsCollapse.hide();
-                        }
-                    }
-                });
-                
-                // Reset all headers
-                partnerCardHeaders.forEach(h => {
-                    h.classList.remove('active');
-                    const btn = h.querySelector('.partner-toggle-btn');
-                    const icon = btn.querySelector('i');
-                    btn.classList.remove('active');
-                    icon.style.transform = 'rotate(0deg)';
-                });
-                
-                // Fill content
-                targetContent.innerHTML = `
-                    <h4><img src="${partnerData.logo}" alt="${partnerData.name} Logo" class="partner-details-logo" onerror="this.onerror=null; this.src='images/logos/default-partner-logo.svg';">${partnerData.name}</h4>
-                    <p>${partnerData.description}</p>
-                    <a href="${partnerData.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i>Mehr erfahren
-                    </a>
-                `;
-                
-                // Open this panel
-                this.classList.add('active');
-                toggleIcon.style.transform = 'rotate(180deg)';
-                currentPartner = partnerId;
-                currentPartnerRow = rowNumber;
-                
-                const bsCollapse = new bootstrap.Collapse(targetPanel, {
-                    toggle: false
-                });
-                bsCollapse.show();
-            }
-        });
-    });
-    
-    // Handle panel close
-    document.querySelectorAll('.partner-details-panel-wrapper').forEach(panel => {
-        panel.addEventListener('hidden.bs.collapse', function() {
-            const isMobile = window.innerWidth <= 768;
-            
-            if (isMobile) {
-                // Mobile: find partner number from panel ID
-                const partnerNum = this.id.replace('partnerDetailsPanelMobile', '');
-                const partnerId = `partner${partnerNum}`;
-                
-                if (currentPartner === partnerId) {
-                    partnerCardHeaders.forEach(header => {
-                        if (header.getAttribute('data-partner') === partnerId) {
-                            header.classList.remove('active');
-                            const btn = header.querySelector('.partner-toggle-btn');
-                            const icon = btn.querySelector('i');
-                            btn.classList.remove('active');
-                            icon.style.transform = 'rotate(0deg)';
-                        }
-                    });
-                    currentPartner = null;
-                    currentPartnerRow = null;
-                }
-            } else {
-                // Desktop: find row number from panel ID
-                const rowNum = this.id.replace('partnerDetailsPanelRow', '');
-                const rowId = rowNum;
-                
-                if (currentPartnerRow === rowId) {
-                    partnerCardHeaders.forEach(header => {
-                        if (header.getAttribute('data-row') === rowId) {
-                            header.classList.remove('active');
-                            const btn = header.querySelector('.partner-toggle-btn');
-                            const icon = btn.querySelector('i');
-                            btn.classList.remove('active');
-                            icon.style.transform = 'rotate(0deg)';
-                        }
-                    });
-                    currentPartner = null;
-                    currentPartnerRow = null;
-                }
-            }
-        });
-    });
+    // Partner Cards - No longer clickable, only show logos
     
     // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');

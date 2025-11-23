@@ -1,4 +1,4 @@
-/* Custom CSS for PlanB Caravaning Website */
+/* Custom CSS for PlanB Website */
 /* Modern Navy Blue Design - Rotes Logo als Akzent */
 
 :root {
@@ -22,18 +22,19 @@
     --primary-gradient: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 40%, var(--primary-700) 70%, var(--primary-600) 100%);
     --accent-gradient: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
     --orange-gradient: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 50%, var(--accent-light) 100%);
+    --accent-gradient: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 50%, var(--accent-light) 100%);
     
     /* Logo Rot als Akzentfarbe */
     --logo-red: #dc2626;
     --logo-red-light: #ef4444;
     --logo-red-dark: #b91c1c;
     
-    /* Supporting Colors - Orange als 2. Akzentfarbe */
+    /* Supporting Colors - Dezentes Blau als Akzentfarbe */
     --secondary-color: #64748b;
-    --accent-color: #f97316;
-    --accent-light: #fb923c;
-    --accent-dark: #ea580c;
-    --accent-hover: #ff7a1a;
+    --accent-color: #2563eb;
+    --accent-light: #3b82f6;
+    --accent-dark: #1e40af;
+    --accent-hover: #2563eb;
     --success-color: var(--logo-red);
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
@@ -274,7 +275,7 @@ body {
     color: var(--white);
     border-color: var(--accent-light);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .desktop-nav-link.active {
@@ -489,10 +490,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 10px;
 }
 
 .hero-section::before {
@@ -504,7 +505,7 @@ body {
     bottom: 0;
     background: 
         radial-gradient(circle at 20% 50%, rgba(51, 78, 104, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
     z-index: 1;
 }
 
@@ -577,7 +578,12 @@ body {
 .hero-section .container {
     position: relative;
     z-index: 2;
-    padding-top: 100px;
+    padding-top: 200px;
+}
+
+.hero-section .row {
+    align-items: flex-start !important;
+    padding-top: 0;
 }
 
 .hero-logo-wrapper {
@@ -588,6 +594,8 @@ body {
     box-shadow: none;
     display: inline-block;
     backdrop-filter: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem !important;
 }
 
 .hero-logo {
@@ -614,6 +622,7 @@ body {
     font-weight: 300;
     opacity: 0.95;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem !important;
 }
 
 .hero-badges {
@@ -622,13 +631,14 @@ body {
     justify-content: center;
     gap: 1rem;
     animation: fadeInUp 1s ease-out 0.6s both;
+    margin-bottom: 2rem !important;
 }
 
 .hero-badge {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--primary-900);
     padding: 0.75rem 1.5rem;
     font-size: 0.95rem;
     font-weight: 500;
@@ -636,56 +646,55 @@ body {
     transition: all var(--transition-base);
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     cursor: pointer;
     overflow: hidden;
-    max-height: 3rem;
+    max-height: 4rem;
+    min-height: 3.5rem;
 }
 
 .hero-badge:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    color: var(--white);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    color: var(--primary-900);
     text-decoration: none;
 }
 
 .hero-badge i {
     font-size: 1.2rem;
-    color: var(--accent-light);
+    color: var(--accent-color);
     margin-right: 0.5rem;
     flex-shrink: 0;
 }
 
 .hero-badge:hover i {
-    color: var(--white);
+    color: var(--accent-dark);
     transform: scale(1.1);
 }
 
 .concorde-logo-icon {
-    height: 1.2rem;
-    max-height: 1.2rem;
+    height: 2rem;
+    max-height: 2rem;
     width: auto;
     margin-right: 0.75rem;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
     opacity: 0.95;
     transition: all var(--transition-base);
     object-fit: contain;
 }
 
-/* JPG-Logo auch weiß machen */
+/* JPG-Logo */
 .concorde-logo-jpg {
-    filter: brightness(0) invert(1) !important;
     opacity: 0.95 !important;
 }
 
-/* Concorde Logo etwas größer */
+/* Concorde Logo größer */
 .concorde-logo-size {
-    height: 1.4rem !important;
-    max-height: 1.4rem !important;
+    height: 2.2rem !important;
+    max-height: 2.2rem !important;
 }
 
 .hero-badge:hover .concorde-logo-icon {
@@ -697,20 +706,26 @@ body {
     display: inline-block;
 }
 
+.dometic-logo-icon {
+    height: 1.5rem !important;
+    max-height: 1.5rem !important;
+}
+
 .hero-call-wrapper {
     animation: fadeInUp 1s ease-out 0.8s both;
-    margin-top: 2rem;
-    padding: 2rem 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem !important;
+    padding: 1rem 0.75rem;
 }
 
 .hero-call-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    max-width: 700px;
+    gap: 1.5rem;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 2.5rem 3rem;
+    padding: 1.5rem 2rem;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
@@ -740,14 +755,16 @@ body {
 }
 
 .hero-call-icon {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-full);
-    background: var(--orange-gradient);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
     flex-shrink: 0;
@@ -759,7 +776,7 @@ body {
     position: absolute;
     inset: -4px;
     border-radius: var(--radius-full);
-    background: var(--orange-gradient);
+    background: rgba(255, 255, 255, 0.4);
     opacity: 0.4;
     filter: blur(12px);
     z-index: -1;
@@ -767,8 +784,8 @@ body {
 }
 
 .hero-call-icon i {
-    font-size: 2.5rem;
-    color: var(--white);
+    font-size: 1.75rem;
+    color: var(--accent-color);
     z-index: 1;
 }
 
@@ -791,7 +808,7 @@ body {
 }
 
 .hero-call-text {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--white);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -801,7 +818,7 @@ body {
 .hero-call-number {
     display: inline-flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
     text-decoration: none;
@@ -813,11 +830,11 @@ body {
 .hero-call-number:hover {
     color: var(--accent-light);
     transform: scale(1.05);
-    text-shadow: 0 4px 15px rgba(249, 115, 22, 0.5);
+    text-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
 }
 
 .hero-call-number i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: 0.5rem;
 }
 
@@ -831,6 +848,46 @@ body {
 
 .hero-cta {
     animation: fadeInUp 1s ease-out 1s both;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cta .btn {
+    backdrop-filter: blur(10px);
+}
+
+.hero-cta .btn-primary {
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--primary-900);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+    color: var(--primary-900);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-cta .btn-outline-light {
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--primary-900);
+    backdrop-filter: blur(10px);
+}
+
+.hero-cta .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+    color: var(--primary-900);
+}
+
+.hero-cta .btn i {
+    color: var(--accent-color);
+}
+
+.hero-cta .btn:hover i {
+    color: var(--accent-dark);
 }
 
 @keyframes fadeInDown {
@@ -857,7 +914,7 @@ body {
 
 .scroll-indicator {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     text-align: center;
     z-index: 2;
     animation: bounce 2s infinite;
@@ -925,7 +982,7 @@ section {
     height: 5px;
     background: var(--orange-gradient);
     border-radius: var(--radius-full);
-    box-shadow: 0 4px 8px rgba(249, 115, 22, 0.35);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.35);
 }
 
 .text-center .section-title::after {
@@ -1135,7 +1192,7 @@ section {
     align-items: center;
     justify-content: center;
     transition: all var(--transition-base);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35), 0 2px 4px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35), 0 2px 4px rgba(59, 130, 246, 0.25);
 }
 
 .service-card-header:hover .service-icon {
@@ -1261,7 +1318,7 @@ section {
     border-radius: var(--radius-lg);
     border: 2px solid var(--accent-color);
     padding: 2.5rem;
-    box-shadow: 0 10px 25px rgba(51, 78, 104, 0.1), 0 4px 10px rgba(249, 115, 22, 0.2);
+    box-shadow: 0 10px 25px rgba(51, 78, 104, 0.1), 0 4px 10px rgba(59, 130, 246, 0.2);
 }
 
 .service-details-panel h4 {
@@ -1420,12 +1477,12 @@ section {
     background: var(--orange-gradient);
     border: none;
     color: var(--white);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35), 0 2px 4px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35), 0 2px 4px rgba(59, 130, 246, 0.25);
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 50%, var(--accent-light) 100%);
-    box-shadow: 0 10px 20px -5px rgba(249, 115, 22, 0.45), 0 4px 8px rgba(249, 115, 22, 0.35);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.45), 0 4px 8px rgba(59, 130, 246, 0.35);
     color: var(--white);
 }
 
@@ -1500,6 +1557,16 @@ footer {
     border-top: 2px solid var(--accent-color);
 }
 
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+footer .row {
+    width: 100%;
+    justify-content: center;
+}
+
 footer h5 {
     color: var(--white);
     font-weight: 700;
@@ -1507,6 +1574,11 @@ footer h5 {
 
 footer .text-muted {
     color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer .col-lg-8 {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer a {
@@ -1677,14 +1749,19 @@ footer a:hover {
     
     /* Logos auf Mobile */
     .concorde-logo-icon {
-        height: 1.2rem !important;
-        max-height: 1.2rem !important;
+        height: 1.5rem !important;
+        max-height: 1.5rem !important;
         margin-right: 0.6rem;
     }
     
     .concorde-logo-size {
-        height: 1.4rem !important;
-        max-height: 1.4rem !important;
+        height: 1.7rem !important;
+        max-height: 1.7rem !important;
+    }
+    
+    .dometic-logo-icon {
+        height: 1.2rem !important;
+        max-height: 1.2rem !important;
     }
     
     .hero-badge img {
@@ -1900,6 +1977,22 @@ footer a:hover {
         padding: 0.35rem 0.7rem;
         margin-bottom: 0 !important;
         line-height: 1.2;
+    }
+    
+    .concorde-logo-icon {
+        height: 1.2rem !important;
+        max-height: 1.2rem !important;
+        margin-right: 0.5rem;
+    }
+    
+    .concorde-logo-size {
+        height: 1.4rem !important;
+        max-height: 1.4rem !important;
+    }
+    
+    .dometic-logo-icon {
+        height: 1rem !important;
+        max-height: 1rem !important;
     }
     
     .hero-call-wrapper {
@@ -2171,7 +2264,7 @@ html {
 .partner-card-header {
     padding: 1.5rem;
     text-align: center;
-    cursor: pointer;
+    cursor: default;
     transition: all var(--transition-base);
     position: relative;
     display: flex;
@@ -2183,8 +2276,10 @@ html {
     gap: 0.75rem;
 }
 
-.partner-card-header:hover {
-    background-color: rgba(51, 78, 104, 0.02);
+.partner-card-header:hover .partner-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .partner-logo {
@@ -2205,16 +2300,11 @@ html {
     color: var(--primary-600);
 }
 
-.partner-card-header:hover .partner-logo {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
-}
-
 .partner-card-header:hover .partner-logo[src*="default-partner-logo.svg"] {
     opacity: 0.9;
     color: var(--primary-700);
 }
+
 
 .partner-name {
     font-size: 0.95rem;
